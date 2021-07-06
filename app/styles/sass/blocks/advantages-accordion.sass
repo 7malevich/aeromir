@@ -1,0 +1,120 @@
+.advantages-accordion
+   padding: 90px 0 70px 0
+
+.accordion
+   margin-top: 25px
+   &__inner
+      max-width: 100%
+      width: 100%
+   &__item
+      position: relative
+      filter: drop-shadow(0px 0px 22px rgba(0, 0, 0, 0.1))
+
+      margin-bottom: 30px
+      &.active
+         transition: all .5s ease-in-out
+         & .accordion__content
+            height: auto
+         & .accordion__header
+            &::before
+               content: ''
+               transform: rotate(180deg) !important
+
+   &__header
+      display: flex
+      cursor: pointer
+      position: relative
+      background: $white
+      border-radius: 6px
+      padding-right: 100px
+      &::before
+         content: ''
+         position: absolute
+         background-image: url('../images/dist/arrow-down.svg')
+         background-repeat: no-repeat
+         width: 25px
+         height: 16px
+         position: absolute
+         top: calc( 50% - 9px )
+         right: 40px
+   &__content
+      position: relative
+      height: 0
+      overflow: hidden
+      transition: min-height .5s ease-in-out
+      margin-top: 2px
+      border-radius: 6px
+      background-color: $white
+      &-inner
+         padding: 25px
+   &__title
+      font-size: 18px
+      line-height: 29px
+      letter-spacing: 0.75px
+      color: $black
+      max-width: 955px
+      width: 100%
+      font-weight: 400
+      padding: 27px 0 27px 25px
+
+   &__number
+      width: 100px
+      min-height: 100px
+      background: $downy
+      border-radius: 6px
+      display: flex
+      justify-content: center
+      align-items: center
+      &-text
+         font-weight: 500
+         font-size: 32px
+         line-height: 40px
+         letter-spacing: 0.75px
+         color: #FFFFFF
+
+@media only screen and (max-width : 1145px)
+   .advantages-accordion
+      padding: 50px 0
+@media only screen and (max-width : 971px)
+   .accordion__title
+      font-size: 16px !important
+      line-height: 22px
+      padding: 15px 0 15px 25px
+   .accordion__content-inner
+      padding: 20px
+      font-size: 15px !important
+@media only screen and (max-width : 772px)
+   .accordion__number
+      min-height: 50px
+   .accordion__title
+      font-size: 14px !important
+      line-height: 18px
+      padding: 10px 0 10px 25px
+   .accordion__header
+      padding-right: 64px
+   .accordion__header::before
+      right: 22px
+   .accordion__content-inner
+      padding: 10px
+      font-size: 14px!important
+   .accordion__item
+      margin-bottom: 10px
+@media only screen and (max-width : 500px)
+   .accordion__number-text
+      font-size: 24px
+   .accordion__number
+      width: 61px
+   .accordion__title
+      line-height: 14px
+   .accordion__header
+      padding-right: 48px
+   .accordion__title
+      font-size: 12px!important
+      line-height: 14px !important
+      padding: 10px 0 10px 10px
+   .accordion__content-inner
+      padding: 10px
+      font-size: 13px!important
+      line-height: 1.2
+   .advantages-accordion
+      padding: 25px 0

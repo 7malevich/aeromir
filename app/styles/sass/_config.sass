@@ -1,0 +1,157 @@
+// USER VARIABLES SECTION
+
+$black: #000
+$white: #fff
+$silver: #C4C4C4
+$gray: #848484
+$downy: #61C9C5
+$concrete: #F3F3F3
+$emperor: #4F4F4F
+
+//SIZES
+$content-size: 1210px
+$white-text: #ffffff
+$black-text: #000
+$accenttext: #173343
+
+$accent: #1152C1 // Accent Color
+$fontsize: 18px // Body Font Size
+$textcolor: #1A1A1A // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+
+@import 'node_modules/swiper/swiper-bundle'
+@import 'node_modules/choices.js/public/assets/styles/choices.min'
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+   @font-face
+      font-family: $fname
+      font-style: $fstyle
+      font-weight: $fweight
+      src: url($furl) format('woff2')
+
+@include font('roboto', normal, 400, '../fonts/Roboto-Regular.woff2')
+@include font('roboto', normal, 500, '../fonts/Roboto-Medium.woff2')
+@include font('roboto', normal, 700, '../fonts/Roboto-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+   color: #666
+
+::selection
+   background-color: $accent
+   color: #fff
+
+input, textarea
+   outline: none
+   &:focus:required:invalid
+      border-color: red
+   &:required:valid
+      border-color: green
+
+body
+   font-family: $userfont
+   font-size: $fontsize
+   line-height: $lineheight
+   color: $textcolor
+   font-weight: normal
+   min-width: 320px
+   position: relative
+   overflow-x: hidden
+   background: $white
+   &.no-scroll,
+   &.show-sidebar
+      overflow: hidden
+
+.wrapper
+   display: flex
+   flex-direction: column
+   height: 100%
+
+.content
+   flex: 1 0 auto
+
+.container
+   margin: 0 auto
+   max-width: $content-size
+   padding: 0 15px
+   width: 100%
+
+// --- 
+h1, h2, h3, h4, h5, h6
+   margin: 0
+   font-size: inherit
+
+ul, li
+   list-style-type: none
+   margin: 0
+   padding: 0
+
+a
+   text-decoration: none
+   display: inline-block
+   cursor: pointer
+   color: $white
+   transition: color .25s ease-out
+   &:hover
+      color: $accent
+      text-decoration: none
+
+p
+   margin: 0
+
+img,
+.img
+   max-width: 100%
+   height: auto
+   object-fit: cover
+
+*
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   box-sizing: border-box
+   &:before, &:after
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+
+*::-webkit-input-placeholder
+   color: #666
+   opacity: 1
+
+*:-moz-placeholder
+   color: #666
+   opacity: 1
+
+*::-moz-placeholder
+   color: #666
+   opacity: 1
+
+*:-ms-input-placeholder
+   color: #666
+   opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+   color: #666
+body input:required:valid,
+body textarea:required:valid
+   color: #666
+
+html, body
+   height: 100%

@@ -1,0 +1,166 @@
+.baner-collage
+   & .container
+      padding: 0
+   &__suptitle
+      font-size: 28px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $black
+   &__images
+      max-width: 100%
+      &-box
+         position: relative
+         overflow: hidden
+   &__inner
+      display: flex
+   &__item
+      position: relative
+      padding: 25px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      transition: transform .15s ease-in-out
+      background-repeat: no-repeat
+      background-size: 100% 100%
+      overflow: hidden
+
+      & .title
+         font-size: 19px
+
+      &:nth-child(2)
+         height: 160px
+
+      &-max
+         margin-right: 20px
+         width: 880px
+         height: 450px
+         object-fit: cover
+         padding-top: 57px
+         padding-left: 35px
+      &-wrapper
+         max-width: 280px
+         width: 100%
+         display: flex
+         flex-direction: column
+         & > .baner-collage__item
+            &:first-child
+               margin-bottom: 20px
+               height: 270px
+   &__title
+      margin-bottom: 15px
+      white-space: nowrap
+   &__btn
+      width: 200px
+      margin-left: 10px
+      margin-bottom: 10px
+   &__more
+      span
+         font-size: 14px
+         line-height: 16px
+         letter-spacing: 0.75px
+         padding: 7px 15px
+         border-radius: 20px
+         background: $gray
+         transition: all .25s ease-in-out
+         &:hover
+            background: #5a5555
+
+@media only screen and (max-width : 971px)
+   .baner-collage__item-max,
+   .baner-collage__inner
+      height: 370px
+   .baner-collage__item-wrapper
+      max-width: 230px
+   .baner-collage__item
+      padding: 19px
+   .baner-collage__item .title
+      font-size: 20px !important
+   .baner-collage__more span
+      font-size: 12px
+   .baner-collage__suptitle
+      font-size: 22px
+   .baner-collage__item
+      padding: 22px
+   .baner-collage__btn
+      margin: 0
+   .baner-collage
+      margin-bottom: 30px
+@media only screen and (max-width : 772px)
+   .baner-collage__inner
+      display: flex
+      flex-direction: column
+   .baner-collage__item-wrapper
+      display: flex
+      flex-direction: revert
+   .baner-collage__item-wrapper
+      max-width: 100%
+      margin-top: 10px
+      height: auto
+   .baner-collage__item-max
+      margin-right: 0
+      width: 100%
+   .baner-collage__item-wrapper>.baner-collage__item:first-child
+      margin-bottom: 0
+      height: 220px
+      margin-right: 10px
+   .baner-collage__item
+      height: auto
+      background-size: cover
+   .baner-collage__item:nth-child(2)
+      height: auto
+      width: 100%
+      background-size: cover
+   .baner-collage__inner, .baner-collage__item-max
+      height: auto
+   .baner-collage__item.baner-collage__item-max
+      width: 100%
+      background-size: cover
+      background-position: bottom center
+      height: 350px
+   .baner-collage__item .title
+      font-size: 16px !important
+   .baner-collage
+      margin-bottom: 20px
+   .product-cart .container .section-title
+      font-size: 22px !important
+      margin-bottom: 6px !important
+@media only screen and (max-width : 600px)
+   .baner-collage__item.baner-collage__item-max
+      height: 287px
+   .baner-collage__item-wrapper>.baner-collage__item:first-child
+      height: 190px
+@media only screen and (max-width : 500px)
+   .baner-collage__item-wrapper>.baner-collage__item:first-child
+      margin-right: 4px
+   .baner-collage__item-wrapper
+      margin-top: 4px
+   .baner-collage__item-wrapper>.baner-collage__item:first-child
+      height: 159px
+      background-size: cover
+   .baner-collage__item.baner-collage__item-max
+      height: 235px
+   .baner-collage__btn
+      width: 157px
+   .baner-collage__item.baner-collage__item-max .btn
+      font-size: 14px !important
+      padding: 10px 40px
+   .baner-collage__title
+      margin-bottom: 8px
+   .baner-collage__item-box .section-title
+      font-size: 18px!important
+   .baner-collage__item-wrapper>.baner-collage__item:first-child
+      padding: 10px
+   .baner-collage__item:nth-child(2)
+      padding: 10px
+   .baner-collage__item .title
+      padding-top: 4px
+      padding-left: 4px
+@media only screen and (max-width : 400px)
+   .baner-collage__item.baner-collage__item-max
+      height: 192px
+   .baner-collage__item-wrapper>.baner-collage__item:first-child
+      height: 140px
+   .baner-collage__item .title
+      font-size: 13px !important
+   .baner-collage__more span
+      font-size: 9px !important
