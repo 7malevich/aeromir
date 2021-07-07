@@ -1,10 +1,11 @@
+// npm i jquery
 // import $ from 'jquery';
 // window.jQuery = $;
 
  require('~/node_modules/choices.js/public/assets/scripts/choices.min.js');
 
-import Swiper,{ Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper,{ Navigation, Pagination, Autoplay} from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay]);
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,11 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 4,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: true,
-		speed: 1000,
-      autoplay: {
-         delay: 2000,
-       },
 		navigation: {
 			prevEl: '#js-prev1',
 			nextEl: '#js-next1' 
