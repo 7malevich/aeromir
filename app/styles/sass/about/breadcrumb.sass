@@ -1,0 +1,34 @@
+.breadcrumb
+   padding: 25px 0 15px 0
+   display: flex
+   &__item
+      padding-right: 20px
+      margin-right: 14px
+      position: relative
+      &:after
+         content: ''
+         background: url(../images/dist/breadcrumb-arrow.svg) no-repeat
+         width: 7px
+         height: 12px
+         position: absolute
+         top: calc(50% - 5px)
+         right: 0
+      &:last-child
+         padding-right: 0
+         margin-right: 0
+         &:after
+            background-image: none
+         & .breadcrumb__link
+            cursor: default
+         & .breadcrumb__text
+            &:hover
+               color: #808080
+
+   &__text
+      font-size: 14px
+      line-height: 24px
+      letter-spacing: 0.75px
+      color: #808080
+      transition: color .15s ease-out
+      &:hover
+         color: $accent

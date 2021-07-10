@@ -2,11 +2,22 @@
 // import $ from 'jquery';
 // window.jQuery = $;
 
- require('~/node_modules/choices.js/public/assets/scripts/choices.min.js');
+require('~/node_modules/choices.js/public/assets/scripts/choices.min.js');
+require('~/node_modules/mmenu-js/dist/mmenu.js');
 
-import Swiper,{ Navigation, Pagination, Autoplay} from 'swiper';
-Swiper.use([Navigation, Pagination, Autoplay]);
+import Swiper, { Navigation, Pagination, Autoplay, Controller} from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay, Controller]);
 
+document.addEventListener(
+   "DOMContentLoaded", () => {
+       new Mmenu( "#mmenu", {
+          "slidingSubmenus": false,
+          "extensions": [
+             "theme-dark"
+          ]
+       });
+   }
+);
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -16,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 25,
       slidesPerGroup: 1,
 		navigation: {
-			prevEl: '#js-prev1',
-			nextEl: '#js-next1' 
+			nextEl: '.swiper-arrow-next-standart',
+			prevEl: '.swiper-arrow-prev-standart',
 		},
       pagination: {
          el: '.swiper-pagination.swiper-pagination__product-standart',
@@ -46,14 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 4,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false,
-		},
 		navigation: {
-			prevEl: '#js-prev',
-			nextEl: '#js-next'    
+			nextEl: '.swiper-arrow-next-premium',
+			prevEl: '.swiper-arrow-prev-premium',
 		},
       pagination: {
          el: '.swiper-pagination.swiper-pagination__product-premium',
@@ -84,14 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-apartments-prev',
-			nextEl: '#js-apartments-next'   
+			prevEl: '#swiper-arrow-next-apartments',
+			nextEl: '#swiper-arrow-prev-apartments' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -121,14 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-offices-prev',
-			nextEl: '#js-offices-next'   
+			prevEl: '.swiper-arrow-next-offices',
+			nextEl: '.swiper-arrow-prev-offices' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -157,14 +153,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-trade-prev',
-			nextEl: '#js-trade-next'   
+			prevEl: '.swiper-arrow-next-trade',
+			nextEl: '.swiper-arrow-prev-trade' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -193,14 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-object-prev',
-			nextEl: '#js-object-next'   
+			prevEl: '.swiper-arrow-next-industrial',
+			nextEl: '.swiper-arrow-prev-industrial' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -228,15 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
       observeParents: true,
       slidesPerView: 3,
       spaceBetween: 25,
-      slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-object-prev',
-			nextEl: '#js-object-next'   
+			prevEl: '#swiper-arrow-next-all',
+			nextEl: '#swiper-arrow-prev-all' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -271,8 +251,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			invert: false,
 		},
 		navigation: {
-			prevEl: '#js-prev-reviews',
-			nextEl: '#js-next-reviews'    
+			prevEl: '.swiper-arrow-next-reviews',
+			nextEl: '.swiper-arrow-prev-reviews' 
 		},
       pagination: {
          el: '.swiper-pagination',
@@ -292,7 +272,33 @@ document.addEventListener('DOMContentLoaded', () => {
            spaceBetween: 30,
          },
        }  
-	})
+	});
+
+   const galleryMini = new Swiper('.gallery-about-mini', {
+      spaceBetween: 15,
+      slidesPerView: 5,
+      touchRatio: 0.2,
+      loop: true,
+      slideToClickedSlide: true,
+    });
+
+    const galleryTop = new Swiper('.gallery-about-top', {
+      spaceBetween: 10,
+      navigation: {
+			nextEl: '.swiper-arrow-next-gallery',
+			prevEl: '.swiper-arrow-prev-gallery'    
+      },
+      pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+         type: 'bullets'
+      },
+      loop: true,
+      loopedSlides: 5
+      });
+
+      galleryMini.controller.control = galleryTop;
+      galleryTop.controller.control = galleryMini;
 
    // ======================== TAB ========================
    let tab = function () {
@@ -350,23 +356,27 @@ document.addEventListener('DOMContentLoaded', () => {
       searchEnabled: false,
    }); 
 
-// ======================== MENU ========================
-   let burgerMenu = () => {
-      const burger = document.querySelector('#sidebarBurger');
-      const sidebar = document.querySelector('#sidebar');
-      const body = document.body;
-
-      burger.addEventListener('click', event =>{
-         body.classList.toggle('show-sidebar');
-         burger.classList.toggle('active');
-      });
-      
-   };  
-// ======================== MENU ACCORDION ========================   
 
    tab();
-   burgerMenu();
-
-  
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+
+   // ======================== SHOW MORE  ========================  
+      const limit = 6;
+      const nextOpen = (wrapper, button) => {
+      const boxs = wrapper.querySelectorAll(".comments__inner"),
+         len = boxs.length - 2,
+         endBox = wrapper.querySelector(".nextstop"),
+         index = [...boxs].indexOf(endBox) + limit;
+      if (endBox) endBox.classList.remove("nextstop");
+      if (index < len) boxs[index].classList.add("nextstop");
+      else button.remove()
+      }
+      document.querySelectorAll(".about-information__comments").forEach(wrapper => {
+      const button = wrapper.nextElementSibling;
+      button.addEventListener("click", nextOpen.bind(null, wrapper, button));
+      nextOpen(wrapper, button);
+      })
+ });

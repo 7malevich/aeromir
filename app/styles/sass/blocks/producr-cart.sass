@@ -79,17 +79,25 @@
    height: 390px
    padding-top: 16px
 
-.swiper-button-next, .swiper-button-prev
-   top: 89%
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev
-   right: -50px
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next
-   left: -50px
+.swiper-arrow-next__img,
+.swiper-arrow-prev__img
+   right: -51px
+   padding: 5px
+   padding-top: 12px
+   cursor: pointer
+   position: absolute
+.swiper-arrow-next__img
+   right: -51px
+.swiper-arrow-prev__img
+   right: 65px
+
+.swiper-button-next.swiper-arrow-next,
+.swiper-button-prev.swiper-arrow-prev
+   display: block
 .swiper-wrapper
    padding-bottom: 33px
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after,
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after
-   content: ""
-.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after
    content: ""
 
 .product-cart--staandard
@@ -102,6 +110,9 @@
       margin-bottom: 13px
    .product-cart--premium
       margin-bottom: 50px
+   .swiper-button-next.swiper-arrow-next,
+   .swiper-button-prev.swiper-arrow-prev
+      display: none
 @media only screen and (max-width : 971px)
    .product-cart .container .section-title
       font-size: 25px !important
