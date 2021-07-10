@@ -23,79 +23,85 @@
 </head>
 
 <body>
-   <header class="header">
-      <div class="container">
-         <div class="header-top">
+   <div id="page">
+      <header class="header">
+         <div class="header-top__wrapper">
+            <div class="container">
+               <div class="header-top">
 
-            <a href="#" class="logo">
-               <img src="images/dist/logo.png" alt="Логотип aeromir" class="logo-img">
-            </a>
-            <nav class="header-top__navigation navigation">
-               <ul class="navigation__list">
-                  <li class="navigation__item navigation__item-adress">
-                     <img class="navigation__icon" src="images/dist/location.svg" alt="">
-                     <div class="text-header">ул. Щербакова, 34, оф. 111
-                        г. Минск</div>
-                  </li>
-                  <li class="navigation__item navigation__item-time">
-                     <img class="navigation__icon" src="images/dist/time.svg" alt="">
-                     <div class="text-header text-header--width-time">Пн-Пт <br>
-                        8:00 - 20:00</div>
-                  </li>
-                  <li class="navigation__item navigation__item-contacts">
-                     <div class="navigation__item-contact">
-                        <img class="navigation__icon" src="images/dist/call.svg" alt="">
-                        <div class="text-header text-header--width-tel">
-                           <a href="tel: +375447423755" class="text-header">+375 44 742 37 55</a>
-                        </div>
+                  <a href="#" class="logo">
+                     <img src="images/dist/logo.png" alt="Логотип aeromir" class="logo-img">
+                  </a>
+                  <nav class="header-top__navigation navigation">
+                     <ul class="navigation__list">
+                        <li class="navigation__item navigation__item-adress">
+                           <img class="navigation__icon" src="images/dist/location.svg" alt="">
+                           <div class="text-header">ул. Щербакова, 34, оф. 111
+                              г. Минск</div>
+                        </li>
+                        <li class="navigation__item navigation__item-time">
+                           <img class="navigation__icon" src="images/dist/time.svg" alt="">
+                           <div class="text-header text-header--width-time">Пн-Пт <br>
+                              8:00 - 20:00</div>
+                        </li>
+                        <li class="navigation__item navigation__item-contacts">
+                           <div class="navigation__item-contact">
+                              <img class="navigation__icon" src="images/dist/call.svg" alt="">
+                              <div class="text-header text-header--width-tel">
+                                 <a href="tel: +375447423755" class="text-header">+375 44 742 37 55</a>
+                              </div>
+                           </div>
+                           <div class="navigation__item-contact">
+                              <img class="navigation__icon" src="images/dist/mail.svg" alt="">
+                              <div class="text-header text-header--width-time">
+                                 <a href="mailto: zakaz.kond@mail.ru" class="text-header">zakaz.kond@mail.ru</a>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                     <div class="header-top__navigation-wrapper">
+                        <ul class="header-top__soc soc">
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/telegram.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/viber.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/whatsapp.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                        </ul>
+                        <form class="header-top__search search" action="" method="get">
+                           <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..."
+                              type="search">
+                           <button class="search__btn" type="submit">
+                              <img src="images/dist/search.svg" alt="">
+                           </button>
+                        </form>
                      </div>
-                     <div class="navigation__item-contact">
-                        <img class="navigation__icon" src="images/dist/mail.svg" alt="">
-                        <div class="text-header text-header--width-time">
-                           <a href="mailto: zakaz.kond@mail.ru" class="text-header">zakaz.kond@mail.ru</a>
-                        </div>
-                     </div>
-                  </li>
-               </ul>
-               <div class="header-top__navigation-wrapper">
-                  <ul class="header-top__soc soc">
-                     <li class="soc__item">
-                        <a href="#" class="soc__link">
-                           <img src="images/dist/soc/telegram.svg" alt="" class="soc__img">
-                        </a>
-                     </li>
-                     <li class="soc__item">
-                        <a href="#" class="soc__link">
-                           <img src="images/dist/soc/viber.svg" alt="" class="soc__img">
-                        </a>
-                     </li>
-                     <li class="soc__item">
-                        <a href="#" class="soc__link">
-                           <img src="images/dist/soc/whatsapp.svg" alt="" class="soc__img">
-                        </a>
-                     </li>
-                  </ul>
-                  <form class="header-top__search search" action="" method="get">
-                     <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..."
-                        type="search">
-                     <button class="search__btn" type="submit">
-                        <img src="images/dist/search.svg" alt="">
-                     </button>
-                  </form>
+                  </nav>
                </div>
-            </nav>
-            <button class="burger" id="sidebarBurger" type="button">
+            </div>
+         </div>
+
+         <div class="burger-menu">
+            <a href="#mmenu" class="burger burger-menu__btn" id="sidebarBurger">
                <span></span>
-            </button>
-         </div>
-      </div>
-      <div class="mobile-menu">
-
-         <div class="sidebar" id="sidebar">
-            <button class="sidebar__close" id="sidebarClose">
-            </button>
+            </a>
          </div>
 
+         <!--<div class="mobile-menu">
+            <div class="sidebar" id="sidebar">
+               <button class="sidebar__close" id="sidebarClose">
+               </button>
+            </div>
+         </div>-->
 
          <div class="header-menu">
             <div class="container">
@@ -150,16 +156,14 @@
                </nav>
             </div>
          </div>
+
          <form class="header-top__search search header-top__search--mobile" action="" method="get">
             <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..." type="search">
             <button class="search__btn" type="submit">
                <img src="images/dist/search.svg" alt="">
             </button>
          </form>
-
-      </div>
-   </header>
-   </div>
+      </header>
 <section class="advantages">
    <div class="container">
       <div class="advantages__inner">
@@ -186,7 +190,6 @@
       </div>
    </div>
 </section>
-
 <section class="baner-collage">
    <div class="container">
       <div class="baner-collage__inner">
@@ -313,11 +316,11 @@
             </div>
             <div class="swiper-pagination swiper-pagination__product-standart"></div>
          </div>
-         <div class="swiper-button-next" id="js-next1">
-            <img src="images/dist/arrow-next.jpg" alt="">
+         <div class="swiper-button-next swiper-arrow-next swiper-arrow-next-standart">
+            <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
          </div>
-         <div class="swiper-button-prev" id="js-prev1">
-            <img src="images/dist/arrow-prev.jpg" alt="">
+         <div class="swiper-button-prev swiper-arrow-prev swiper-arrow-prev-standart">
+            <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
          </div>
       </div>
       <a href="#" class="more">
@@ -425,11 +428,11 @@
             </div>
             <div class="swiper-pagination swiper-pagination__product-premium"></div>
          </div>
-         <div class="swiper-button-next" id="js-next">
-            <img src="images/dist/arrow-next.jpg" alt="">
+         <div class="swiper-button-next swiper-arrow-next swiper-arrow-next-premium">
+            <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
          </div>
-         <div class="swiper-button-prev" id="js-prev">
-            <img src="images/dist/arrow-prev.jpg" alt="">
+         <div class="swiper-button-prev swiper-arrow-prev swiper-arrow-prev-premium">
+            <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
          </div>
       </div>
       <a href="#" class="more">
@@ -633,11 +636,11 @@
                      </div>
                      <div class="swiper-pagination swiper-premises__pagination"></div>
                   </div>
-                  <div class="swiper-button-prev" id="js-object-prev">
-                     <img src="images/dist/arrow-prev.jpg" alt="">
+                  <div class="swiper-button-next swiper-arrow-next" id="swiper-arrow-next-all">
+                     <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
                   </div>
-                  <div class="swiper-button-next" id="js-object-next">
-                     <img src="images/dist/arrow-next.jpg" alt="">
+                  <div class="swiper-button-prev swiper-arrow-prev" id="swiper-arrow-prev-all">
+                     <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
                   </div>
                </div>
             </div>
@@ -726,11 +729,11 @@
                      </div>
                      <div class="swiper-pagination swiper-premises__pagination"></div>
                   </div>
-                  <div class="swiper-button-prev" id="js-apartments-prev">
-                     <img src="images/dist/arrow-prev.jpg" alt="">
+                  <div class="swiper-button-next swiper-arrow-next" id="swiper-arrow-next-apartments">
+                     <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
                   </div>
-                  <div class="swiper-button-next" id="js-apartments-next">
-                     <img src="images/dist/arrow-next.jpg" alt="">
+                  <div class="swiper-button-prev swiper-arrow-prev" id="swiper-arrow-prev-apartments">
+                     <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
                   </div>
                </div>
             </div>
@@ -819,11 +822,11 @@
                      </div>
                      <div class="swiper-pagination swiper-premises__pagination"></div>
                   </div>
-                  <div class="swiper-button-prev" id="js-offices-prev">
-                     <img src="images/dist/arrow-prev.jpg" alt="">
+                  <div class="swiper-button-next swiper-arrow-next">
+                     <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
                   </div>
-                  <div class="swiper-button-next" id="js-offices-next">
-                     <img src="images/dist/arrow-next.jpg" alt="">
+                  <div class="swiper-button-prev swiper-arrow-prev">
+                     <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
                   </div>
                </div>
             </div>
@@ -912,11 +915,11 @@
                      </div>
                      <div class="swiper-pagination swiper-premises__pagination"></div>
                   </div>
-                  <div class="swiper-button-prev" id="js-trade-prev">
-                     <img src="images/dist/arrow-prev.jpg" alt="">
+                  <div class="swiper-button-next swiper-arrow-next">
+                     <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
                   </div>
-                  <div class="swiper-button-next" id="js-trade-next">
-                     <img src="images/dist/arrow-next.jpg" alt="">
+                  <div class="swiper-button-prev swiper-arrow-prev">
+                     <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
                   </div>
                </div>
             </div>
@@ -1005,11 +1008,11 @@
                      </div>
                      <div class="swiper-pagination swiper-premises__pagination"></div>
                   </div>
-                  <div class="swiper-button-prev" id="js-trade-prev">
-                     <img src="images/dist/arrow-prev.jpg" alt="">
+                  <div class="swiper-button-next swiper-arrow-next">
+                     <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
                   </div>
-                  <div class="swiper-button-next" id="js-trade-next">
-                     <img src="images/dist/arrow-next.jpg" alt="">
+                  <div class="swiper-button-prev swiper-arrow-prev">
+                     <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
                   </div>
                </div>
             </div>
@@ -1111,14 +1114,13 @@
             </div>
             <div class="swiper-pagination swiper-pagination__product-standart"></div>
          </div>
-         <div class="swiper-button-next" id="js-next-reviews">
-            <img src="images/dist/arrow-next.jpg" alt="">
+         <div class="swiper-button-next swiper-arrow-next swiper-arrow-next-reviews">
+            <img class="swiper-arrow-next__img" src="images/dist/arrow-next.svg" alt="">
          </div>
-         <div class="swiper-button-prev" id="js-prev-reviews">
-            <img src="images/dist/arrow-prev.jpg" alt="">
+         <div class="swiper-button-prev swiper-arrow-prev swiper-arrow-prev-reviews">
+            <img class="swiper-arrow-prev__img" src="images/dist/arrow-prev.svg" alt="">
          </div>
       </div>
-   </div>
 </section>
 <section class="submitting-form">
    <div class="container">
@@ -1346,7 +1348,6 @@
       </div>
    </div>
 </section>
-
       <footer class="footer">
          <div class="container">
             <div class="footer__inner">
@@ -1463,6 +1464,33 @@
             </div>
          </div>
       </footer>
+      </div>
+      <nav id="mmenu">
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/work">Our work</a></li>
+            <li><span>About us</span>
+               <ul>
+                  <li><a href="/about/history">History</a></li>
+                  <li><span>The team</span>
+                     <ul>
+                        <li><a href="/about/team/management">Management</a></li>
+                        <li><a href="/about/team/sales">Sales</a></li>
+                        <li><a href="/about/team/development">Development</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li><span>Services</span>
+               <ul>
+                  <li><a href="/services/design">Design</a></li>
+                  <li><a href="/services/development">Development</a></li>
+                  <li><a href="/services/marketing">Marketing</a></li>
+               </ul>
+            </li>
+            <li><a href="/contact">Contact</a></li>
+         </ul>
+      </nav>
       <script src="js/app.min.js"></script>
 
       </body>
