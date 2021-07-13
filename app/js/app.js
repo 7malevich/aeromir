@@ -364,6 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener("DOMContentLoaded", function() {
 
    // ======================== SHOW MORE  ========================  
+
       const limit = 6;
       const nextOpen = (wrapper, button) => {
       const boxs = wrapper.querySelectorAll(".comments__inner"),
@@ -379,4 +380,22 @@ document.addEventListener("DOMContentLoaded", function() {
       button.addEventListener("click", nextOpen.bind(null, wrapper, button));
       nextOpen(wrapper, button);
       })
- });
+
+      const limitComments = 6;
+      const nextOpenComments = (wrapper, button) => {
+      const boxsComments = wrapper.querySelectorAll(".product-cart__item"),
+         lenComments = boxsComments.length - 2,
+         endBoxComments = wrapper.querySelector(".nextstop"),
+         indexComments = [...boxsComments].indexOf(endBoxComments) + limitComments;
+      if (endBoxComments) endBoxComments.classList.remove("nextstop");
+      if (indexComments < lenComments) boxsComments[indexComments].classList.add("nextstop");
+      else button.remove()
+      }
+      document.querySelectorAll(".product-cart__inner").forEach(wrapper => {
+      const button = wrapper.nextElementSibling;
+      button.addEventListener("click", nextOpenComments.bind(null, wrapper, button));
+      nextOpenComments(wrapper, button);
+      })
+
+
+ }); 
