@@ -1,0 +1,599 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+   <meta charset="utf-8">
+   <!-- <base href="/"> -->
+
+   <title>
+      aeromir
+   </title>
+   <meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+   <link rel="icon" href="images/favicon.png">
+   <meta property="og:image" content="images/dist/preview.jpg">
+
+   <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+   <div id="page">
+      <header class="header">
+         <div class="header-top__wrapper">
+            <div class="container">
+               <div class="header-top">
+
+                  <a href="#" class="logo">
+                     <img src="images/dist/logo.png" alt="Логотип aeromir" class="logo-img">
+                  </a>
+                  <nav class="header-top__navigation navigation">
+                     <ul class="navigation__list">
+                        <li class="navigation__item navigation__item-adress">
+                           <img class="navigation__icon" src="images/dist/location.svg" alt="">
+                           <div class="text-header">ул. Щербакова, 34, оф. 111
+                              г. Минск</div>
+                        </li>
+                        <li class="navigation__item navigation__item-time">
+                           <img class="navigation__icon" src="images/dist/time.svg" alt="">
+                           <div class="text-header text-header--width-time">Пн-Пт <br>
+                              8:00 - 20:00</div>
+                        </li>
+                        <li class="navigation__item navigation__item-contacts">
+                           <div class="navigation__item-contact">
+                              <img class="navigation__icon" src="images/dist/call.svg" alt="">
+                              <div class="text-header text-header--width-tel">
+                                 <a href="tel: +375447423755" class="text-header">+375 44 742 37 55</a>
+                              </div>
+                           </div>
+                           <div class="navigation__item-contact">
+                              <img class="navigation__icon" src="images/dist/mail.svg" alt="">
+                              <div class="text-header text-header--width-time">
+                                 <a href="mailto: zakaz.kond@mail.ru" class="text-header">zakaz.kond@mail.ru</a>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                     <div class="header-top__navigation-wrapper">
+                        <ul class="header-top__soc soc">
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/telegram.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/viber.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/whatsapp.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                        </ul>
+                        <form class="header-top__search search" action="" method="get">
+                           <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..."
+                              type="search">
+                           <button class="search__btn" type="submit">
+                              <img src="images/dist/search.svg" alt="">
+                           </button>
+                        </form>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+
+         <div class="burger-menu">
+            <a href="#mmenu" class="burger burger-menu__btn" id="sidebarBurger">
+               <span></span>
+            </a>
+         </div>
+
+         <!--<div class="mobile-menu">
+            <div class="sidebar" id="sidebar">
+               <button class="sidebar__close" id="sidebarClose">
+               </button>
+            </div>
+         </div>-->
+
+         <div class="header-menu">
+            <div class="container">
+               <nav class="navbar-nav header-menu__navbar-nav">
+                  <ul class="navbar-nav__list">
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Каталог</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Монтаж вентиляции</a>
+                        <ul class="navbar-nav__dropdown dropdown-menu">
+                           <li class="dropdown-menu__item">
+                              <a href="#" class="dropdown-menu__link">Текст меню 1-1</a>
+                              <ul class="supdropdown-menu">
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-1-1</a>
+                                 </li>
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-1-2</a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="dropdown-menu__item">
+                              <a href="#" class="dropdown-menu__link">Текст меню 1-2</a>
+                           </li>
+                           <li class="dropdown-menu__item">
+                              <a href="#" class="dropdown-menu__link">Текст меню 1-3</a>
+                              <ul class="supdropdown-menu">
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-3-1</a>
+                                 </li>
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-3-2</a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Монтаж кондиционеров</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Получить консультацию</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">О компании</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Контакты</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+
+         <form class="header-top__search search header-top__search--mobile" action="" method="get">
+            <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..." type="search">
+            <button class="search__btn" type="submit">
+               <img src="images/dist/search.svg" alt="">
+            </button>
+         </form>
+      </header>
+<div class="s-breadcrumb">
+   <div class="container">
+      <ul class="breadcrumb">
+         <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">
+               <span class="breadcrumb__text">Главная</span>
+            </a>
+         </li>
+         <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">
+               <span class="breadcrumb__text">Каталог</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>
+<section class="about-information">
+   <div class="container">
+      <div class="about-information__inner">
+         <div class="about-information__sidebar sidebar-about">
+            <ul class="sidebar-about__list product-cart__list">
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Кондиционеры для квартиры и дома
+                  </a>
+               </li>
+               <li class="sidebar-about__item active">
+                  <a href="#" class="sidebar-about__link">
+                     Кондиционеры для офиса
+                     и магазина
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Промышленное кондиционирование
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Аксессуары для кондиционеров
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Расходный материал
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Сервис, химия, обслуживание
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="about-information__content about-information__content-spasing">
+            <div class="about-information__cart product-cart">
+               <div class="product-cart__inner-tile product-cart__inner--shodow">
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+                  <div class="product-cart__item-tile">
+                     <div class="product-cart__images-box">
+                        <img src="images/dist/product-cart/product-cart-1.jpg" alt="" class="product-cart__images">
+                     </div>
+                     <h2 class="product-cart__title">GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <span class="product-cart__price">1 456 бел. руб.</span>
+                     <a href="" class="product-cart__link">
+                        <span>Подробнее</span>
+                     </a>
+                  </div>
+
+               </div>
+               <div class="product-cart__more">
+                  <button class="btn btn-gray comments__btn">
+                     <span> Показать еще</span>
+                  </button>
+                  <ul class="product-cart__panation pagination">
+                     <li class="pagination__item pagination__item--first">
+                        <a href="#" class="pagination__link">
+                           Первая
+                        </a>
+                     </li>
+                     <li class="pagination__item">
+                        <a href="#" class="pagination__link">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.5 6.5L6 12L11.5 17.5" stroke="#808080" stroke-linecap="round" />
+                              <path d="M17.5 6.5L12 12L17.5 17.5" stroke="#808080" stroke-linecap="round" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="pagination__item active">
+                        <a href="#" class="pagination__link">
+                           1
+                        </a>
+                     </li>
+                     <li class="pagination__item">
+                        <a href="#" class="pagination__link">
+                           2
+                        </a>
+                     </li>
+                     <li class="pagination__item">
+                        <a href="#" class="pagination__link">
+                           3
+                        </a>
+                     </li>
+                     <li class="pagination__item">
+                        <a href="#" class="pagination__link">
+                           4
+                        </a>
+                     </li>
+                     <li class="pagination__item">
+                        <a href="#" class="pagination__link">
+                           5
+                        </a>
+                     </li>
+                     <li class="pagination__item">
+                        <a href="#" class="pagination__link">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6 17.5L11.5 12L6 6.5" stroke="#808080" stroke-linecap="round" />
+                              <path d="M12 17.5L17.5 12L12 6.5" stroke="#808080" stroke-linecap="round" />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="pagination__item pagination__item--last">
+                        <a href="#" class="pagination__link">
+                           Последняя
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+
+         </div>
+
+      </div>
+   </div>
+   </div>
+</section>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Кондиционирование</h4>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Оборудование
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Расходные материалы
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Вентиляция</h4>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Оборудование
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Материалы
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Расходные материалы
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Инженерные работы</h4>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Проектирование систем
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Монтажные работы
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Пуско-наладочные работы
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Сервисные работы
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Контактная информация</h4>
+                     </li>
+                     <li class="navigation__item navigation__item-adress footer__item-adress">
+                        <img class="navigation__icon" src="images/dist/location.svg" alt="">
+                        <div class="text-header">ул. Щербакова, 34, оф. 111
+                           г. Минск</div>
+                     </li>
+                     <li class="navigation__item navigation__item-contacts">
+                        <div class="navigation__item-contact">
+                           <img class="navigation__icon" src="images/dist/call.svg" alt="">
+                           <div class="text-header text-header--width-tel">
+                              <a href="tel: +375447423755" class="text-header">+375 44 742 37 55</a>
+                           </div>
+                        </div>
+                        <div class="navigation__item-contact footer__item-contact">
+                           <img class="navigation__icon" src="images/dist/mail.svg" alt="">
+                           <div class="text-header text-header--width-time">
+                              <a href="mailto: zakaz.kond@mail.ru" class="text-header">zakaz.kond@mail.ru</a>
+                           </div>
+                        </div>
+                     </li>
+                     <ul class="header-top__soc footer__soc">
+                        <li class="soc__item">
+                           <a href="#" class="soc__link">
+                              <img src="images/dist/soc/telegram.svg" alt=""
+                                 class="soc__img footer__soc-img footer__soc-img-tg">
+                           </a>
+                        </li>
+                        <li class="soc__item">
+                           <a href="#" class="soc__link">
+                              <img src="images/dist/soc/viber.svg" alt="" class="soc__img footer__soc-img">
+                           </a>
+                        </li>
+                        <li class="soc__item">
+                           <a href="#" class="soc__link">
+                              <img src="images/dist/soc/whatsapp.svg" alt="" class="soc__img footer__soc-img">
+                           </a>
+                        </li>
+                     </ul>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      </div>
+      <nav id="mmenu">
+         <ul>
+            <li><span>Каталог</span>
+               <ul>
+                  <li><span>Кондиционирование</span>
+                     <ul>
+                        <li><a href="/">Кондиционеры для квартиры и дома</a></li>
+                        <li><a href="/">Кондиционеры для офиса и магазина</a></li>
+                        <li><a href="/">Промышленные кондиционеры</a></li>
+                        <li><a href="/">Аксессуары для кондиционеров</a></li>
+                        <li><a href="/">Расходные материалы</a></li>
+                        <li><a href="/">Сервис, химия, обслуживание</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="/">Вентиляция</a></li>
+               </ul>
+            </li>
+            <!--<li><span>Services</span>
+               <ul>
+                  <li><a href="/services/design">Design</a></li>
+                  <li><a href="/services/development">Development</a></li>
+                  <li><a href="/services/marketing">Marketing</a></li>
+               </ul>
+            </li>-->
+            <li><a href="/">Монтаж вентиляции</a></li>
+            <li><a href="/">Монтаж кондиционеров</a></li>
+            <li><a href="/">Получить консультацию</a></li>
+            <li><a href="/">О компании</a></li>
+            <li><a href="/">Контакты</a></li>
+         </ul>
+      </nav>
+      <script src="js/app.min.js"></script>
+
+      </body>
+
+      </html>

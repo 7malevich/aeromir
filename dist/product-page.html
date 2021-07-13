@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+   <meta charset="utf-8">
+   <!-- <base href="/"> -->
+
+   <title>
+      aeromir
+   </title>
+   <meta name="description" content="Startup HTML template OptimizedHTML 5">
+
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+   <link rel="icon" href="images/favicon.png">
+   <meta property="og:image" content="images/dist/preview.jpg">
+
+   <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+   <div id="page">
+      <header class="header">
+         <div class="header-top__wrapper">
+            <div class="container">
+               <div class="header-top">
+
+                  <a href="#" class="logo">
+                     <img src="images/dist/logo.png" alt="Логотип aeromir" class="logo-img">
+                  </a>
+                  <nav class="header-top__navigation navigation">
+                     <ul class="navigation__list">
+                        <li class="navigation__item navigation__item-adress">
+                           <img class="navigation__icon" src="images/dist/location.svg" alt="">
+                           <div class="text-header">ул. Щербакова, 34, оф. 111
+                              г. Минск</div>
+                        </li>
+                        <li class="navigation__item navigation__item-time">
+                           <img class="navigation__icon" src="images/dist/time.svg" alt="">
+                           <div class="text-header text-header--width-time">Пн-Пт <br>
+                              8:00 - 20:00</div>
+                        </li>
+                        <li class="navigation__item navigation__item-contacts">
+                           <div class="navigation__item-contact">
+                              <img class="navigation__icon" src="images/dist/call.svg" alt="">
+                              <div class="text-header text-header--width-tel">
+                                 <a href="tel: +375447423755" class="text-header">+375 44 742 37 55</a>
+                              </div>
+                           </div>
+                           <div class="navigation__item-contact">
+                              <img class="navigation__icon" src="images/dist/mail.svg" alt="">
+                              <div class="text-header text-header--width-time">
+                                 <a href="mailto: zakaz.kond@mail.ru" class="text-header">zakaz.kond@mail.ru</a>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                     <div class="header-top__navigation-wrapper">
+                        <ul class="header-top__soc soc">
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/telegram.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/viber.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                           <li class="soc__item">
+                              <a href="#" class="soc__link">
+                                 <img src="images/dist/soc/whatsapp.svg" alt="" class="soc__img">
+                              </a>
+                           </li>
+                        </ul>
+                        <form class="header-top__search search" action="" method="get">
+                           <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..."
+                              type="search">
+                           <button class="search__btn" type="submit">
+                              <img src="images/dist/search.svg" alt="">
+                           </button>
+                        </form>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+
+         <div class="burger-menu">
+            <a href="#mmenu" class="burger burger-menu__btn" id="sidebarBurger">
+               <span></span>
+            </a>
+         </div>
+
+         <!--<div class="mobile-menu">
+            <div class="sidebar" id="sidebar">
+               <button class="sidebar__close" id="sidebarClose">
+               </button>
+            </div>
+         </div>-->
+
+         <div class="header-menu">
+            <div class="container">
+               <nav class="navbar-nav header-menu__navbar-nav">
+                  <ul class="navbar-nav__list">
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Каталог</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Монтаж вентиляции</a>
+                        <ul class="navbar-nav__dropdown dropdown-menu">
+                           <li class="dropdown-menu__item">
+                              <a href="#" class="dropdown-menu__link">Текст меню 1-1</a>
+                              <ul class="supdropdown-menu">
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-1-1</a>
+                                 </li>
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-1-2</a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="dropdown-menu__item">
+                              <a href="#" class="dropdown-menu__link">Текст меню 1-2</a>
+                           </li>
+                           <li class="dropdown-menu__item">
+                              <a href="#" class="dropdown-menu__link">Текст меню 1-3</a>
+                              <ul class="supdropdown-menu">
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-3-1</a>
+                                 </li>
+                                 <li class="supdropdown-menu__item">
+                                    <a href="#" class="supdropdown-menu__link">Текст меню 1-3-2</a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Монтаж кондиционеров</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Получить консультацию</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">О компании</a>
+                     </li>
+                     <li class="navbar-nav__item">
+                        <a href="#" class="navbar-nav__link">Контакты</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+
+         <form class="header-top__search search header-top__search--mobile" action="" method="get">
+            <input class="search__input" placeholder="Поиск" name="s" placeholder="Искать здесь..." type="search">
+            <button class="search__btn" type="submit">
+               <img src="images/dist/search.svg" alt="">
+            </button>
+         </form>
+      </header>
+<div class="s-breadcrumb">
+   <div class="container">
+      <ul class="breadcrumb">
+         <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">
+               <span class="breadcrumb__text">Главная</span>
+            </a>
+         </li>
+         <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">
+               <span class="breadcrumb__text">Каталог</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+</div>
+<section class="about-information">
+   <div class="container">
+      <div class="about-information__inner">
+         <div class="about-information__sidebar sidebar-about">
+            <ul class="sidebar-about__list product-cart__list">
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Кондиционеры для квартиры и дома
+                  </a>
+               </li>
+               <li class="sidebar-about__item active">
+                  <a href="#" class="sidebar-about__link">
+                     Кондиционеры для офиса
+                     и магазина
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Промышленное кондиционирование
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Аксессуары для кондиционеров
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Расходный материал
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="#" class="sidebar-about__link">
+                     Сервис, химия, обслуживание
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="about-information__content about-information__content-spasing">
+            <div class="product-cart__item">
+               <div class="product-cart__img">
+                  <img src="images/dist/product-cart/conditioners-apartments/product-cart-1.jpg"
+                     alt="Фото кондиционера">
+                  <span class="product-cart__recommended">Рекомендуем</span>
+                  <span class="product-cart__stock">В наличии</span>
+               </div>
+               <div class="product-cart__content">
+                  <div class="product-cart__content-top">
+                     <h2 class="product-cart__title title">Кондиционер GREE BEE TECHNO INVERTER R32 GWH09QB</h2>
+                     <div class="product-cart__price">1 456 бел. руб.</div>
+                  </div>
+                  <div class="comments__rater product-cart__rater">
+                     <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M10.886 6.926l.112.345h6.454l-4.925 3.553-.296.214.114.347 1.883 5.756-4.935-3.561L9 13.369l-.293.211-4.935 3.56 1.884-5.755.113-.347-.296-.214L.548 7.271h6.454l.113-.345L9 1.164l1.886 5.762z"
+                           stroke="gray" />
+                     </svg>
+                     <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M10.886 6.926l.112.345h6.454l-4.925 3.553-.296.214.114.347 1.883 5.756-4.935-3.561L9 13.369l-.293.211-4.935 3.56 1.884-5.755.113-.347-.296-.214L.548 7.271h6.454l.113-.345L9 1.164l1.886 5.762z"
+                           stroke="gray" />
+                     </svg>
+                     <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M10.886 6.926l.112.345h6.454l-4.925 3.553-.296.214.114.347 1.883 5.756-4.935-3.561L9 13.369l-.293.211-4.935 3.56 1.884-5.755.113-.347-.296-.214L.548 7.271h6.454l.113-.345L9 1.164l1.886 5.762z"
+                           stroke="gray" />
+                     </svg>
+                     <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M10.886 6.926l.112.345h6.454l-4.925 3.553-.296.214.114.347 1.883 5.756-4.935-3.561L9 13.369l-.293.211-4.935 3.56 1.884-5.755.113-.347-.296-.214L.548 7.271h6.454l.113-.345L9 1.164l1.886 5.762z"
+                           stroke="gray" />
+                     </svg>
+                     <svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M10.886 6.926l.112.345h6.454l-4.925 3.553-.296.214.114.347 1.883 5.756-4.935-3.561L9 13.369l-.293.211-4.935 3.56 1.884-5.755.113-.347-.296-.214L.548 7.271h6.454l.113-.345L9 1.164l1.886 5.762z"
+                           stroke="gray" />
+                     </svg>
+                  </div>
+                  <p class="product-cart__text">Кондиционер Gree Bee Techno Inverter R32 GWH09QB-K6DNA5I (Wi-Fi) -
+                     это перспективная модель стандартного класса от крупнейшего производителя Gree. Устройство
+                     может работать в режиме охлаждения и обогрева, осушения и вентиляции. Данная модель
+                     предназначена для кондиционирования помещений до
+                     50 м2.</p>
+
+                  <div class="product-cart__details characteristics">
+                     <div class="characteristics__item accordion__item active">
+                        <div class="characteristics__title">Характеристики</div>
+                        <div class="characteristics__content accordion__content">
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Производитель</div>
+                              <div class="characteristics__description">Gree</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Тип кондиционера</div>
+                              <div class="characteristics__description">сплит-система</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Тип внутреннего блока</div>
+                              <div class="characteristics__description">настенный</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Режим работы</div>
+                              <div class="characteristics__description">охлаждение/обогрев</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Обслуживаемая площадь, м2</div>
+                              <div class="characteristics__description">50</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Инверторное управл. мощностью</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Ионизация</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Мощность охлаждения, кВт</div>
+                              <div class="characteristics__description">5</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Потребляемая мощность при охлаждении, кВт</div>
+                              <div class="characteristics__description">0,81</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Мощность обогрева, кВт</div>
+                              <div class="characteristics__description">6</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Потребляемая мощность при обогреве, кВт</div>
+                              <div class="characteristics__description">0,76</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Рабочий диапазон температур при охлаждении, ℃</div>
+                              <div class="characteristics__description">от -15 до +43</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Рабочий диапазон температур при обогреве, ℃</div>
+                              <div class="characteristics__description">от -15 до +24</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Регулировка направления воздушного потока</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Пульт дистанционного управления</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Таймер</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Авторестарт</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Сенсор движения</div>
+                              <div class="characteristics__description">нет</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Ночной режим</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Режим осушения воздуха</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Фильтры тонкой очистки воздуха</div>
+                              <div class="characteristics__description">плазменный фильтр</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Регулятор скорости вращения вентилятора</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Шум внутреннего блока, дБ</div>
+                              <div class="characteristics__description">23</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Вес внутреннего блока, кг</div>
+                              <div class="characteristics__description">9</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Вес внешнего блока, кг</div>
+                              <div class="characteristics__description">29,5</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Фильтры тонкой очистки воздуха</div>
+                              <div class="characteristics__description">плазменный фильтр</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Регулятор скорости вращения вентилятора</div>
+                              <div class="characteristics__description">есть</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Ширина внутреннего блока</div>
+                              <div class="characteristics__description">790 мм</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Высота внутреннего блока</div>
+                              <div class="characteristics__description">275 мм</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Глубина внутреннего блока</div>
+                              <div class="characteristics__description">200 мм</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Ширина внешнего блока</div>
+                              <div class="characteristics__description">785 мм</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Высота внешнего блока</div>
+                              <div class="characteristics__description">540 мм</div>
+                           </div>
+                           <div class="characteristics__content-item">
+                              <div class="characteristics__name">Глубина внешнего блока</div>
+                              <div class="characteristics__description">320 мм</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <a href="" class="btn product-cart__btn">Заказать</a>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</section>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__inner">
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Кондиционирование</h4>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Оборудование
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Расходные материалы
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Вентиляция</h4>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Оборудование
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Материалы
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Расходные материалы
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Инженерные работы</h4>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Проектирование систем
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Монтажные работы
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Пуско-наладочные работы
+                        </a>
+                     </li>
+                     <li class="footer__item">
+                        <a href="#" class="footer__link">
+                           Сервисные работы
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer__item">
+                  <ul class="footer__list">
+                     <li class="footer__item">
+                        <h4 class="footer__item-title">Контактная информация</h4>
+                     </li>
+                     <li class="navigation__item navigation__item-adress footer__item-adress">
+                        <img class="navigation__icon" src="images/dist/location.svg" alt="">
+                        <div class="text-header">ул. Щербакова, 34, оф. 111
+                           г. Минск</div>
+                     </li>
+                     <li class="navigation__item navigation__item-contacts">
+                        <div class="navigation__item-contact">
+                           <img class="navigation__icon" src="images/dist/call.svg" alt="">
+                           <div class="text-header text-header--width-tel">
+                              <a href="tel: +375447423755" class="text-header">+375 44 742 37 55</a>
+                           </div>
+                        </div>
+                        <div class="navigation__item-contact footer__item-contact">
+                           <img class="navigation__icon" src="images/dist/mail.svg" alt="">
+                           <div class="text-header text-header--width-time">
+                              <a href="mailto: zakaz.kond@mail.ru" class="text-header">zakaz.kond@mail.ru</a>
+                           </div>
+                        </div>
+                     </li>
+                     <ul class="header-top__soc footer__soc">
+                        <li class="soc__item">
+                           <a href="#" class="soc__link">
+                              <img src="images/dist/soc/telegram.svg" alt=""
+                                 class="soc__img footer__soc-img footer__soc-img-tg">
+                           </a>
+                        </li>
+                        <li class="soc__item">
+                           <a href="#" class="soc__link">
+                              <img src="images/dist/soc/viber.svg" alt="" class="soc__img footer__soc-img">
+                           </a>
+                        </li>
+                        <li class="soc__item">
+                           <a href="#" class="soc__link">
+                              <img src="images/dist/soc/whatsapp.svg" alt="" class="soc__img footer__soc-img">
+                           </a>
+                        </li>
+                     </ul>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </footer>
+      </div>
+      <nav id="mmenu">
+         <ul>
+            <li><span>Каталог</span>
+               <ul>
+                  <li><span>Кондиционирование</span>
+                     <ul>
+                        <li><a href="/">Кондиционеры для квартиры и дома</a></li>
+                        <li><a href="/">Кондиционеры для офиса и магазина</a></li>
+                        <li><a href="/">Промышленные кондиционеры</a></li>
+                        <li><a href="/">Аксессуары для кондиционеров</a></li>
+                        <li><a href="/">Расходные материалы</a></li>
+                        <li><a href="/">Сервис, химия, обслуживание</a></li>
+                     </ul>
+                  </li>
+                  <li><a href="/">Вентиляция</a></li>
+               </ul>
+            </li>
+            <!--<li><span>Services</span>
+               <ul>
+                  <li><a href="/services/design">Design</a></li>
+                  <li><a href="/services/development">Development</a></li>
+                  <li><a href="/services/marketing">Marketing</a></li>
+               </ul>
+            </li>-->
+            <li><a href="/">Монтаж вентиляции</a></li>
+            <li><a href="/">Монтаж кондиционеров</a></li>
+            <li><a href="/">Получить консультацию</a></li>
+            <li><a href="/">О компании</a></li>
+            <li><a href="/">Контакты</a></li>
+         </ul>
+      </nav>
+      <script src="js/app.min.js"></script>
+
+      </body>
+
+      </html>

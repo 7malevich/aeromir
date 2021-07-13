@@ -356,6 +356,22 @@ document.addEventListener('DOMContentLoaded', () => {
       searchEnabled: false,
    }); 
 
+      // ======================== accordions ========================
+      const accordionsPtoductDescription = document.querySelectorAll('.characteristics__item');
+   
+      for(let item of accordionsPtoductDescription){
+         item.addEventListener('click', function() {
+           if(this.classList.contains('active')){
+            this.classList.remove('active');
+           } else{
+              for(let el of accordionsPtoductDescription){
+                 el.classList.remove('active');
+              }
+              this.classList.add('active');
+           }
+         })
+      }
+
 
    tab();
 
@@ -395,6 +411,22 @@ document.addEventListener("DOMContentLoaded", function() {
       const button = wrapper.nextElementSibling;
       button.addEventListener("click", nextOpenComments.bind(null, wrapper, button));
       nextOpenComments(wrapper, button);
+      })
+
+      const limitProductCartTile = 6;
+      const nextOpenProductCartTile = (wrapper, button) => {
+      const boxsProductCartTile = wrapper.querySelectorAll(".product-cart__item-tile"),
+         lenProductCartTile = boxsProductCartTile.length - 2,
+         endBoxProductCartTile = wrapper.querySelector(".nextstop"),
+         indexProductCartTile = [...boxsProductCartTile].indexOf(endBoxProductCartTile) + limitProductCartTile;
+      if (endBoxProductCartTile) endBoxProductCartTile.classList.remove("nextstop");
+      if (indexProductCartTile < lenProductCartTile) boxsProductCartTile[indexProductCartTile].classList.add("nextstop");
+      else button.remove()
+      }
+      document.querySelectorAll(".product-cart__inner-tile").forEach(wrapper => {
+      const buttonProductCartTile = wrapper.nextElementSibling;
+      buttonProductCartTile.addEventListener("click", nextOpenProductCartTile.bind(null, wrapper, buttonProductCartTile));
+      nextOpenProductCartTile(wrapper, buttonProductCartTile);
       })
 
 
