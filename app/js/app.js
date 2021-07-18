@@ -2,8 +2,8 @@
 // import $ from 'jquery';
 // window.jQuery = $;
 
-require('~/node_modules/choices.js/public/assets/scripts/choices.min.js');
-require('~/node_modules/mmenu-js/dist/mmenu.js');
+require('../vendor/choices.js/public/assets/scripts/choices.min.js');
+require('../vendor/mmenu-js/dist/mmenu.js');
 
 import Swiper, { Navigation, Pagination, Autoplay, Controller} from 'swiper';
 Swiper.use([Navigation, Pagination, Autoplay, Controller]);
@@ -20,6 +20,19 @@ document.addEventListener(
 );
 
 document.addEventListener('DOMContentLoaded', () => {
+   const swiperFacilities = new Swiper('.our-facilities-swiper', {
+      observer: true,
+      observeParents: true, 
+      slidesPerView: 1,
+      spaceBetween: 2,
+      slidesPerGroup: 1,
+      loop: true,
+      pagination: {
+         el: '.swiper-pagination.our-facilities__pagination',
+         clickable: true,
+         type: 'bullets'
+      }
+   })
 
    // ======================== SLIDER ========================
    const swiperProductStandard = new Swiper('.swiper-product-cart-staandard', {
@@ -246,10 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 25,
       slidesPerGroup: 1,
 		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false,
-		},
 		navigation: {
 			prevEl: '.swiper-arrow-next-reviews',
 			nextEl: '.swiper-arrow-prev-reviews' 
@@ -299,6 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       galleryMini.controller.control = galleryTop;
       galleryTop.controller.control = galleryMini;
+      
+   
 
    // ======================== TAB ========================
    let tab = function () {
@@ -323,9 +334,36 @@ document.addEventListener('DOMContentLoaded', () => {
           tabContent.forEach(item => {
               item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
           });
+      }   
+   };
+
+   let tabObjects = function () {
+
+      let tabNavObjects = document.querySelectorAll('.our-facilities-catigories__list'),
+          tabContentObjects = document.querySelectorAll('.tab-facilities'),
+          tabNameObjects; 
+   
+      tabNavObjects.forEach(item => {
+          item.addEventListener('click', selectTabNav)
+      });
+   
+      function selectTabNav() {
+          tabNavObjects.forEach(item => {
+              item.classList.remove('is-active');
+          });
+          this.classList.add('is-active');
+          tabNameObjects = this.getAttribute('data-tab-name');
+          selectTabContent(tabNameObjects);
       }
    
+      function selectTabContent(tabNameObjects) {
+          tabContentObjects.forEach(item => {
+              item.classList.contains(tabNameObjects) ? item.classList.add('is-active') : item.classList.remove('is-active');
+          });
+      }   
    };
+   tabObjects();
+
 
    // ======================== accordions ========================
    const accordions = document.querySelectorAll('.accordion__item');
@@ -337,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else{
            for(let el of accordions){
               el.classList.remove('active');
-           }
+           } 
            this.classList.add('active');
         }
       })
@@ -378,7 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-
    // ======================== SHOW MORE  ========================  
 
       const limit = 6;

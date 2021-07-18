@@ -49,15 +49,38 @@
       margin: 0
 .red
    color: red
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+   bottom: 3px
 .swiper-pagination__product-standart,
 .swiper-pagination__product-premium,
 .swiper-premises__pagination
    display: none
+.swiper-pagination-bullet-active
+   background: #2D72EA !important
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+   margin: 0 5px
+
+.swiper-pagination-bullet
+   width: 10px
+   height: 10px
+   display: inline-block
+   border-radius: 50%
+   background: $concrete
+   opacity: 1
+
 @media only screen and (max-width : 1292px)
    .swiper-pagination__product-standart,
    .swiper-pagination__product-premium,
    .swiper-premises__pagination
       display: block
+   .swiper-button-next.swiper-arrow-next,
+   .swiper-button-prev.swiper-arrow-prev
+      display: none
+
+   .swiper-wrapper
+      padding-bottom: 30px !important
+
 @media only screen and (max-width : 971px)
    .section-title
       font-size: 20px !important
