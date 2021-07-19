@@ -1,0 +1,40 @@
+@import "bourbon";
+
+@mixin trans($property) {
+	transition: $property .35s ease;
+}
+
+//540px
+@mixin bp-sm {
+  @media only screen and (min-width: 540px) {
+    @content;
+  }
+}
+
+//720px
+@mixin bp-md {
+  @media only screen and (min-width: 720px) {
+    @content;
+  }
+}
+
+//960px
+@mixin bp-lg {
+  @media only screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+//1140px
+@mixin bp-xl {
+  @media only screen and (min-width: 1140px) {
+    @content;
+  }
+}
+
+//custom
+@mixin bp-custom($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
