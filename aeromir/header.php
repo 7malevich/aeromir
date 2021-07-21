@@ -25,8 +25,7 @@
          <div class="header-top__wrapper">
             <div class="container">
                <div class="header-top">
-
-                  <a href="#" class="logo">
+                  <a href="/" class="logo">
                      <img src="/wp-content/themes/aeromir/img/logo.png" alt="Логотип aeromir" class="logo-img">
                   </a>
                   <nav class="header-top__navigation navigation">
@@ -105,7 +104,7 @@
                <nav class="navbar-nav header-menu__navbar-nav">
                   <ul class="navbar-nav__list">
                      <li class="navbar-nav__item">
-                        <a href="#" class="navbar-nav__link">Каталог</a>
+                        <a href="catalog" class="navbar-nav__link">Каталог</a>
                         <ul class="navbar-nav__dropdown dropdown-menu">
                            <li class="dropdown-menu__item">
                               <a href="#" class="dropdown-menu__link">Кондиционирование</a>
@@ -137,19 +136,19 @@
 
                      </li>
                      <li class="navbar-nav__item">
-                        <a href="#" class="navbar-nav__link">Монтаж вентиляции</a>
+                        <a href="/ventilation-installation" class="navbar-nav__link">Монтаж вентиляции</a>
                      </li>
                      <li class="navbar-nav__item">
-                        <a href="#" class="navbar-nav__link">Монтаж кондиционеров</a>
+                        <a href="/conditioners-installation" class="navbar-nav__link">Монтаж кондиционеров</a>
                      </li>
                      <li class="navbar-nav__item">
                         <a href="#" class="navbar-nav__link">Получить консультацию</a>
                      </li>
                      <li class="navbar-nav__item">
-                        <a href="#" class="navbar-nav__link">О компании</a>
+                        <a href="about" class="navbar-nav__link">О компании</a>
                      </li>
                      <li class="navbar-nav__item">
-                        <a href="http://aeromir.loc/contact" class="navbar-nav__link">Контакты</a>
+                        <a href="contact" class="navbar-nav__link">Контакты</a>
                      </li>
                   </ul>
                </nav>

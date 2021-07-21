@@ -4,7 +4,7 @@
    <div class="container">
       <ul class="breadcrumb">
          <li class="breadcrumb__item">
-            <a href="#" class="breadcrumb__link">
+            <a href="/" class="breadcrumb__link">
                <span class="breadcrumb__text">Главная</span>
             </a>
          </li>
@@ -22,22 +22,27 @@
          <aside class="about-information__sidebar sidebar-about">
             <ul class="sidebar-about__list">
                <li class="sidebar-about__item active">
-                  <a href="about.html" class="sidebar-about__link">
+                  <a href="/catalog" class="sidebar-about__link">
                      Информация о компании
                   </a>
                </li>
                <li class="sidebar-about__item">
-                  <a href="licenses.html" class="sidebar-about__link">
+                  <a href="/licenses" class="sidebar-about__link">
                      Лицензии и сертификаты
                   </a>
                </li>
                <li class="sidebar-about__item">
-                  <a href="services.html" class="sidebar-about__link">
+                  <a href="/services" class="sidebar-about__link">
                      Услуги
                   </a>
                </li>
                <li class="sidebar-about__item">
-                  <a href="comments.html" class="sidebar-about__link">
+                  <a href="/objects" class="sidebar-about__link">
+                     Наши объекты
+                  </a>
+               </li>
+               <li class="sidebar-about__item">
+                  <a href="/comments" class="sidebar-about__link">
                      Отзывы
                   </a>
                </li>
@@ -69,11 +74,15 @@
                   <div class="swiper-wrapper gallery-about__wrapper">
                      <div class="swiper-slide gallery-about__slide">
                         <div class="gallery-about__img-box">
-                           <img src="/wp-content/themes/aeromir/img/about-gallery/1.jpg" alt="" class="gallery-about__img">
+                           <img src="/wp-content/themes/aeromir/img/about-gallery/about-gallery-1.jpg" alt="" class="gallery-about__img">
+                        </div>
+                        <div class="our-facilities__img">
+                           <img src="/wp-content/themes/aeromir/img/our-objects/shopping-facilities/shopping-facilities-1.jpg"
+                              alt="">
                         </div>
                      </div>
-                     <div class="swiper-slide gallery-about__slide">
-                        <div class="gallery-about__img-box">
+                     <div class="swiper-slide gallery-about__slide">                        
+                        <div class="gallery-about__img-box">                           
                            <img src="/wp-content/themes/aeromir/img/about-gallery/2.jpg" alt="" class="gallery-about__img">
                         </div>
                      </div>
@@ -120,9 +129,9 @@
                   <div class="swiper-wrapper gallery-about-mini__wrapper">
                      <div class="swiper-slide gallery-about-mini__slide">
                         <div class="gallery-about-mini__img-box">
-                           <img src="/wp-content/themes/aeromir/img/about-gallery/1.jpg" alt="" class="gallery-about-mini__img">
+                           <img src="/wp-content/themes/aeromir/img/about-gallery/about-gallery-1.jpg" alt="" class="gallery-about-mini__img">
                         </div>
-                     </div>
+                     </div> 
                      <div class="swiper-slide gallery-about-mini__slide">
                         <div class="gallery-about-mini__img-box">
                            <img src="/wp-content/themes/aeromir/img/about-gallery/2.jpg" alt="" class="gallery-about-mini__img">

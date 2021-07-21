@@ -952,17 +952,7 @@ if( isset($faq) & !empty($faq) ) {
                <form action="#" class="form">
                   <input type="text" placeholder="Ваше имя" class="form__input form__input-number">
                   <input type="email" placeholder="Ваш e-mail" class="form__input form__input-name">
-                  <select class="form__input js-choice js-faq-select-area" name="selected area" id="">
-                     <option value="">Выберите область?</option>
-                     <option value="">Вариант 1</option>
-                     <option value="">Вариант 2</option>
-                  </select>
-                  <select class="form__input js-choice js-faq-select-question" name="selected question" id="">
-                     <option data-choices-placeholder value>Ваш вопрос?</option>
-                     <option value="">Вариант 1</option>
-                     <option value="">Вариант 2</option>
-                     <option value="">Вариант 3</option>
-                  </select>
+                  <textarea class="form__input form__input-textarea" placeholder="Ваше сообщение" name="comment"></textarea>
                   <button class="btn btn--width">Задать вопрос</button>
                </form>
             </div>

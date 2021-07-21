@@ -17,7 +17,7 @@
                   </a>
                </li>
             </ul>
-            <button class="btn btn--width">Заказать</button>
+            <button class="btn btn--width">Сделать заказ</button>
          </div>
          <div class="footer__item">
             <ul class="footer__list">
@@ -92,7 +92,9 @@
                      </div>
                   </div>
                </li>
+               <div class="text-header footer__soc-text">Мы всегда на связи:</div>
                <ul class="header-top__soc footer__soc">
+
                   <li class="soc__item">
                      <a href="#" class="soc__link">
                         <img src="/wp-content/themes/aeromir/img/soc/telegram.svg" alt=""

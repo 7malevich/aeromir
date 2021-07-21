@@ -6,7 +6,7 @@
          <div class="contacts__item">
             <h2 class="title">ООО “АэроМир”</h2>
             <ul class="navigation__list contacts__list">
-               <li class="navigation__item navigation__item-adress">
+               <li class="navigation__item navigation__item-adress contacts__adress">
                   <img class="navigation__icon" src="/wp-content/themes/aeromir/img/location.svg" alt="">
                   <div class="text-header">ул. Щербакова, 34, оф. 111
                      г. Минск</div>
@@ -26,6 +26,10 @@
                   </div>
                </li>
             </ul>
+            <p class="text">
+               Для заказа, а также по всем интересующим вопросом воспользуйтесь любым удобным
+               для Вас способом связи.
+            </p>
 
          </div>
          <div class="contacts__item contacts__maps">
@@ -42,5 +46,19 @@
       </div>
    </div>
 </section>
+
+<div class="contacts__form">
+   <div class="container">
+      <h2 class="section-title">Напишите нам</h2>
+      <div class="contacts__form-inner">
+         <form action="#" class="form">
+            <input type="text" placeholder="Ваше имя" class="form__input form__input-number">
+            <input type="email" placeholder="Ваш e-mail" class="form__input form__input-name">
+            <textarea class="form__input form__input-textarea" placeholder="Ваше сообщение" name="comment"></textarea>
+            <button class="btn btn-min-width">Отправить</button>
+         </form>
+      </div>
+   </div>
+</div>
 
 <?php get_footer(); ?>
