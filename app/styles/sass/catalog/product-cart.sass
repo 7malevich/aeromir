@@ -233,6 +233,61 @@
          top: 3px
          background-size: cover
 
+.product-baner
+   width: 100%
+   height: 290px
+   background-repeat: no-repeat
+   background-size: cover
+   padding: 35px
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   position: relative
+   z-index: 50
+   &::before
+      content: ''
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.47) 0%, rgba(0, 0, 0, 0) 58.43%)
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      position: absolute
+   &__suptitle
+      font-size: 22px
+      z-index: 1
+      color: $white-text
+      line-height: 140%
+      letter-spacing: 0.75px
+   &__heading
+      margin-top: 50px
+      margin-bottom: 30px
+      font-weight: normal
+      font-size: 22px
+      line-height: 140%
+      text-align: center
+      letter-spacing: 0.75px
+      color: $black-text
+   &__box
+      & .btn
+         margin-right: 25px
+         padding: 17px 10px !important
+         &:last-child
+            margin-right: 0
+         &:hover
+            color: $white
+   &__title
+      font-weight: 500
+      font-size: 36px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $white
+      z-index: 50
+   &__spacing
+      margin-top: 50px
+
 @media only screen and (max-width : 1179px)
    .product-cart__item-tile
       &:nth-child(3n+3)
