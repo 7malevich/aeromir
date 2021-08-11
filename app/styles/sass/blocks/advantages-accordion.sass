@@ -11,8 +11,9 @@
       filter: drop-shadow(0px 0px 22px rgba(0, 0, 0, 0.1))
 
       margin-bottom: 30px
+      transition: height .5s ease-in-out !important
+
       &.active
-         transition: all .5s ease-in-out
          & .accordion__content
             height: auto
          & .accordion__header
@@ -35,13 +36,14 @@
          width: 25px
          height: 16px
          position: absolute
+         transition: all .15s ease-in-out !important
+
          top: calc( 50% - 9px )
          right: 40px
    &__content
       position: relative
       height: 0
       overflow: hidden
-      transition: min-height .5s ease-in-out
       margin-top: 2px
       border-radius: 6px
       background-color: $white
@@ -74,7 +76,7 @@
 
 @media only screen and (max-width : 1145px)
    .advantages-accordion
-      padding: 50px 0
+      padding: 75px 0
 @media only screen and (max-width : 971px)
    .accordion__title
       font-size: 16px !important
@@ -116,5 +118,8 @@
       padding: 10px
       font-size: 13px!important
       line-height: 1.2
-   .advantages-accordion
-      padding: 25px 0
+   .accordion__header::before
+      content: ""
+      width: 18px
+      height: 10px
+      background-size: contain

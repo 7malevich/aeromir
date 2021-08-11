@@ -1,0 +1,265 @@
+.about-information
+   &__btn
+      margin-bottom: 56px
+   &__inner
+      display: flex
+      &.about-information__content
+         margin-bottom: 100px
+      &-licenses
+         width: calc(100% - 303px)
+      &--between
+         justify-content: space-between
+   &__comments
+      display: flex
+      flex-direction: column
+   &__gallery
+      height: 700px
+      width: 100%
+   &__content
+      width: 73%
+      margin-bottom: 150px
+      &.about-information__content-about
+         width: 100%
+      & .product-cart .title
+         text-align: left
+      & .product-cart__price
+         margin-top: 0
+
+   &__title
+      font-weight: 500
+      font-size: 24px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $black
+      margin-bottom: 14px
+   &__inner-title
+      padding-left: 79px
+   &__text
+      font-weight: 400
+      font-size: 18px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $black
+      margin-bottom: 25px
+
+.sidebar-about
+   transform: translateX(-15px)
+   &__title
+      font-size: 18px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $text
+      padding: 0
+      transform: translateX(8px)
+
+   &__list
+      display: flex
+      width: 302px
+      min-height: 370px
+      padding: 8px 18px 0px 5px
+      margin-right: 20px
+      flex-direction: column
+   &__item
+      margin-bottom: 3px
+      padding: 7px 0
+      transition: background .15s ease-out
+      &:first-child
+         padding: 0
+         &:hover
+            background: transparent
+      &:hover
+         background: $concrete
+         border-radius: 4px
+      &.active
+         padding: 7px 0 8px 0
+         background: $downy
+         border-radius: 4px
+         & .sidebar-about__link
+            color: $white
+            font-weight: 500
+
+   &__link
+      font-weight: 400
+      font-size: 18px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $black
+      padding-left: 10px
+
+.gallery-about
+   width: 100%
+   height: 100%
+   &-top
+      width: 100%
+      height: 80%
+   &__img-box
+      width: 100%
+      height: 100%
+   &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+   &-mini
+      height: 20%
+      padding: 10px 0
+      &__swiper-pagination
+         display: block
+         width: calc(100% - 303px)
+         max-width: 880px
+         display: flex
+         justify-content: center
+         padding-top: 15px
+         & .swiper-pagination-bullet
+            margin-right: 10px
+            &:last-child
+               margin-right: 0
+      &__slide
+         max-width: 880px
+         width: 100%
+         height: 100%
+         transition: opacity 0.3s ease 0s
+         //&:nth-child(even)
+         //   max-width: 108px
+         //   width: 100%
+         //   & .gallery-about-mini__img-box
+         //      width: 100%
+         //&:first-child
+         //   max-width: 160px
+         //   width: 100%
+         //   & .gallery-about-mini__img-box
+         //      width: 100%
+
+      &__img-box
+         width: 100%
+         height: 100%
+      &__img
+         object-fit: cover
+         width: 100%
+         height: 100%
+
+.swiper-button-next, .swiper-button-prev
+   position: absolute
+   top: 82%
+.swiper-arrow-prev-gallery__img
+   left: 12px
+   position: absolute
+
+.star-rating
+   background: url(../images/dist/rating-on.svg) !important
+
+   & .star-value
+      background: url(../images/dist/rating-off.svg) !important
+      background-size: 25px
+
+.comments
+   &__box-inner
+      max-width: 210px
+   &__content
+      margin-bottom: 220px
+   &__btn
+      &:hover
+         background-color: #d0d0d0
+   &__inner
+      box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1)
+      border-radius: 6px
+      margin-bottom: 30px
+      &:last-child
+         margin-bottom: 40px
+      &.nextstop
+         margin-bottom: 30px
+
+      &-box
+         display: flex
+         justify-content: space-between
+
+   &__rater
+      display: flex
+      margin-bottom: 11px
+      &-five
+         svg
+            path
+               stroke: #2D72EA
+               fill: #2D72EA
+      &-four
+         svg
+            path
+               stroke: #2D72EA
+               fill: #2D72EA
+            &:last-child
+               path
+                  stroke: gray
+                  fill: none
+
+      svg
+         margin-right: 5px
+         &:last-child
+            margin-right: 0
+   &__data
+      font-weight: 400
+      font-size: 16px
+      line-height: 140%
+      text-align: right
+      letter-spacing: 0.75px
+      color: $gray
+      display: block
+.about-information__content-spasing
+   width: 100%
+.comments__box.comments__box-bottom
+   display: none
+.comments__inner.nextstop ~ .comments__inner
+   display: none
+@media only screen and (max-width : 1186px)
+   .sidebar-about__link
+      font-size: 16px
+   .sidebar-about__list
+      width: 280px
+   .product-cart__img
+      margin-right: 33px !important
+
+@media only screen and (max-width : 1000px)
+   .sidebar-about__link
+      font-size: 14px
+   .sidebar-about__list
+      width: 250px
+   .about-information__gallery
+      height: 610px
+   .about-information__content.about-information__content-about
+      width: calc(100% + 32px)
+      //width: calc(100% + 26px)
+@media only screen and (max-width : 866px)
+   .about-information__gallery
+      height: 500px
+   .gallery-about-mini
+      padding: 0px
+   .about-information__gallery .swiper-container
+      padding-bottom: 8px
+   .about-information__inner-title
+      padding-left: 0
+
+@media screen and (max-width: 772px )
+   .about-information__btn
+      margin-bottom: 30px
+      margin-top: 20px
+
+@media only screen and (max-width : 642px)
+   .about-information__gallery
+      height: 400px
+   .about-information__title
+      font-size: 20px
+   .about-information__text
+      font-size: 16px
+@media screen and ( max-width: 550px)
+   .comments__box
+      display: none
+   .comments__box.comments__box-bottom
+      display: block
+      margin-top: 20px
+   .comments__box-bottom
+      & .comments__data
+         display: inline-block
+      & .comments__rater
+         margin-bottom: 10px
+   .swiper-reviews__box-img
+      min-width: 60px
+      max-width: 60px
+      height: 60px

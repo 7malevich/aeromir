@@ -2,22 +2,61 @@
 // import $ from 'jquery';
 // window.jQuery = $;
 
- require('~/node_modules/choices.js/public/assets/scripts/choices.min.js');
+require('../vendor/choices.js/public/assets/scripts/choices.min.js');
+require('../vendor/mmenu-js/dist/mmenu.js');
 
-import Swiper,{ Navigation, Pagination, Autoplay} from 'swiper';
-Swiper.use([Navigation, Pagination, Autoplay]);
+import Swiper, { Navigation, Pagination, Autoplay, Controller} from 'swiper';
+Swiper.use([Navigation, Pagination, Autoplay, Controller]);
 
+document.addEventListener(
+   "DOMContentLoaded", () => {
+       new Mmenu( "#mmenu", {
+       });
+   }
+);
 
 document.addEventListener('DOMContentLoaded', () => {
+   document.querySelector('.search__btn').addEventListener('click', (e) => {
+      e.preventDefault() 
+      document.querySelector('.mmenu__search').classList.toggle('active')
+   })
 
-   // ======================== SLIDER ========================
+   const burger = document.querySelector('.burger-menu');
+   const burgerMenuBody = document.querySelector('.burger-menu.active');
+   const body = document.body;
+
+   burger.addEventListener('click', (e) => {
+      body.classList.toggle('mm-wrapper_opening')
+      burger.classList.toggle('active')
+      body.classList.add('mm-wrapper_blocking')
+      if(!body.classList.contains('mm-wrapper_opening')){
+         body.classList.remove('mm-wrapper_blocking')        
+      }
+   });
+ 
+
+   // ======================== SLIDER ========================   
+   const swiperFacilities = new Swiper('.our-facilities-swiper', {
+      observer: true,
+      observeParents: true, 
+      slidesPerView: 1,
+      spaceBetween: 5,
+      slidesPerGroup: 1,
+      loop: true,
+      pagination: {
+         el: '.swiper-pagination.our-facilities__pagination',
+         clickable: true,
+         type: 'bullets'
+      }
+   });
+
    const swiperProductStandard = new Swiper('.swiper-product-cart-staandard', {
       slidesPerView: 4,
-      spaceBetween: 25,
+      spaceBetween: 5, 
       slidesPerGroup: 1,
 		navigation: {
-			prevEl: '#js-prev1',
-			nextEl: '#js-next1' 
+			nextEl: '.swiper-arrow-next-standart',
+			prevEl: '.swiper-arrow-prev-standart',
 		},
       pagination: {
          el: '.swiper-pagination.swiper-pagination__product-standart',
@@ -34,26 +73,22 @@ document.addEventListener('DOMContentLoaded', () => {
          },
          850: {
            slidesPerView: 3,
-           spaceBetween: 30,
+           spaceBetween: 5,
          },
          1150: {
            slidesPerView: 4,
+           spaceBetween: 5, 
          }
        }      
-	})
+	});
 
    const swiperProductPremium = new Swiper('.swiper-product-cart.swiper-product-cart-premium', {
       slidesPerView: 4,
-      spaceBetween: 25,
+      spaceBetween: 5,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false,
-		},
 		navigation: {
-			prevEl: '#js-prev',
-			nextEl: '#js-next'    
+			nextEl: '.swiper-arrow-next-premium',
+			prevEl: '.swiper-arrow-prev-premium',
 		},
       pagination: {
          el: '.swiper-pagination.swiper-pagination__product-premium',
@@ -63,35 +98,31 @@ document.addEventListener('DOMContentLoaded', () => {
       breakpoints: {
          320: {
            slidesPerView: 1,
-           spaceBetween: 20,
+           spaceBetween: 5,
          },
          550: {
            slidesPerView: 2,
          },
          790: {
            slidesPerView: 3,
-           spaceBetween: 30,
+           spaceBetween: 5,
          },
          1150: {
            slidesPerView: 4,
          }
        }      
 
-	}) 
+	});
+
    const swiperPremisesApartments = new Swiper('.swiper-premises-apartments', {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-apartments-prev',
-			nextEl: '#js-apartments-next'   
+			prevEl: '#swiper-arrow-next-apartments',
+			nextEl: '#swiper-arrow-prev-apartments' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -113,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
          },
        }      
 
-	})
+	});
 
    const swiperPremisesOffices = new Swiper('.swiper-premises-offices', {
       observer: true,
@@ -121,14 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-offices-prev',
-			nextEl: '#js-offices-next'   
+			prevEl: '.swiper-arrow-next-offices',
+			nextEl: '.swiper-arrow-prev-offices' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -136,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
          type: 'bullets'
       },
 
-      breakpoints: {
+      breakpoints: { 
          320: {
            slidesPerView: 1,
            spaceBetween: 20,
@@ -150,21 +176,17 @@ document.addEventListener('DOMContentLoaded', () => {
          },
        }      
 
-	})
+	});
+
    const swiperPremisesTrade = new Swiper('.swiper-premises-trade', {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-trade-prev',
-			nextEl: '#js-trade-next'   
+			prevEl: '.swiper-arrow-next-trade',
+			nextEl: '.swiper-arrow-prev-trade' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -186,21 +208,17 @@ document.addEventListener('DOMContentLoaded', () => {
          },
        }      
 
-	})
+	}); 
+
    const swiperPremisesIndustrial = new Swiper('.swiper-premises-industrial', {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
       spaceBetween: 25,
       slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-object-prev',
-			nextEl: '#js-object-next'   
+			prevEl: '.swiper-arrow-next-industrial',
+			nextEl: '.swiper-arrow-prev-industrial' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -220,23 +238,17 @@ document.addEventListener('DOMContentLoaded', () => {
            slidesPerView: 3,
            spaceBetween: 30,
          },
-       }      
+       }    
+	});
 
-	})
    const swiperPremisesAll = new Swiper('.swiper-premises-all', {
       observer: true,
       observeParents: true,
       slidesPerView: 3,
       spaceBetween: 25,
-      slidesPerGroup: 1,
-		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false, 
-		},
 		navigation: {
-			prevEl: '#js-object-prev',
-			nextEl: '#js-object-next'   
+			prevEl: '#swiper-arrow-next-all',
+			nextEl: '#swiper-arrow-prev-all' 
 		},
       pagination: {
          el: '.swiper-pagination.swiper-premises__pagination',
@@ -256,9 +268,8 @@ document.addEventListener('DOMContentLoaded', () => {
            slidesPerView: 3,
            spaceBetween: 30,
          },
-       }      
-
-	})
+       }     
+	});
 
 
    const swiperReviews = new Swiper('.swiper-container.swiper-reviews', {
@@ -266,13 +277,9 @@ document.addEventListener('DOMContentLoaded', () => {
       spaceBetween: 25,
       slidesPerGroup: 1,
 		loop: false,
-		speed: 2700,
-		mousewheel: {
-			invert: false,
-		},
 		navigation: {
-			prevEl: '#js-prev-reviews',
-			nextEl: '#js-next-reviews'    
+			prevEl: '.swiper-arrow-next-reviews',
+			nextEl: '.swiper-arrow-prev-reviews' 
 		},
       pagination: {
          el: '.swiper-pagination',
@@ -292,10 +299,45 @@ document.addEventListener('DOMContentLoaded', () => {
            spaceBetween: 30,
          },
        }  
-	})
+	});
+
+   const galleryMini = new Swiper('.gallery-about-mini', {
+      spaceBetween: 15,
+      slidesPerView: 5,
+      touchRatio: 0.2,
+      breakpoints: {
+         320: {
+            spaceBetween: 5,
+         },
+         866: {
+            spaceBetween: 15,
+         },
+       },
+      loop: true,
+      slideToClickedSlide: true,
+    });
+
+    const galleryTop = new Swiper('.gallery-about-top', {
+      spaceBetween: 10,
+      navigation: {
+			nextEl: '.swiper-arrow-next-gallery',
+			prevEl: '.swiper-arrow-prev-gallery'    
+      },
+      pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+         type: 'bullets'
+      },
+      loop: true,
+      loopedSlides: 5
+      });
+
+      galleryMini.controller.control = galleryTop;
+      galleryTop.controller.control = galleryMini;
+      
+   
 
    // ======================== TAB ========================
-   let tab = function () {
       let tabNav = document.querySelectorAll('.our-objects-catigories__list'),
           tabContent = document.querySelectorAll('.tab'),
           tabName;
@@ -317,9 +359,35 @@ document.addEventListener('DOMContentLoaded', () => {
           tabContent.forEach(item => {
               item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
           });
+      }   
+
+   let tabObjects = function () {
+
+      let tabNavObjects = document.querySelectorAll('.our-facilities-catigories__list'),
+          tabContentObjects = document.querySelectorAll('.tab-facilities'),
+          tabNameObjects; 
+   
+      tabNavObjects.forEach(item => {
+          item.addEventListener('click', selectTabNav)
+      });
+   
+      function selectTabNav() {
+          tabNavObjects.forEach(item => {
+              item.classList.remove('is-active');
+          });
+          this.classList.add('is-active');
+          tabNameObjects = this.getAttribute('data-tab-name');
+          selectTabContent(tabNameObjects);
       }
    
+      function selectTabContent(tabNameObjects) {
+          tabContentObjects.forEach(item => {
+              item.classList.contains(tabNameObjects) ? item.classList.add('is-active') : item.classList.remove('is-active');
+          });
+      }   
    };
+   tabObjects();
+
 
    // ======================== accordions ========================
    const accordions = document.querySelectorAll('.accordion__item');
@@ -331,7 +399,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else{
            for(let el of accordions){
               el.classList.remove('active');
-           }
+           } 
            this.classList.add('active');
         }
       })
@@ -350,23 +418,19 @@ document.addEventListener('DOMContentLoaded', () => {
       searchEnabled: false,
    }); 
 
-// ======================== MENU ========================
-   let burgerMenu = () => {
-      const burger = document.querySelector('#sidebarBurger');
-      const sidebar = document.querySelector('#sidebar');
-      const body = document.body;
-
-      burger.addEventListener('click', event =>{
-         body.classList.toggle('show-sidebar');
-         burger.classList.toggle('active');
-      });
-      
-   };  
-// ======================== MENU ACCORDION ========================   
-
-   tab();
-   burgerMenu();
-
-  
-
+      // ======================== accordions ========================
+      const accordionsPtoductDescription = document.querySelectorAll('.characteristics__item');
+   
+      for(let item of accordionsPtoductDescription){
+         item.addEventListener('click', function() {
+           if(this.classList.contains('active')){
+            this.classList.remove('active'); 
+           } else{
+              for(let el of accordionsPtoductDescription){
+                 el.classList.remove('active');
+              }
+              this.classList.add('active');
+           }
+         })
+      }
 });

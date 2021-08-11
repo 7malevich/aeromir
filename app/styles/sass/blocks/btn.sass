@@ -6,6 +6,7 @@
    padding: 17px 60px
    background: $accent
    display: inline-block
+   text-align: center
    border: none
    transition: background .25s ease-in-out
    border-radius: 6px
@@ -14,3 +15,16 @@
       background-color: #114b8c
    &-width
       width: 100%
+   &-min-width
+      width: 180px
+      padding: 17px 36px
+   &-max-width
+      width: 250px
+      padding: 17px 10px
+      margin: 0 auto
+   &-gray
+      color: #808080
+      background: $concrete
+@media only screen and (max-width : 600px)
+   .btn
+      font-size: 16px

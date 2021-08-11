@@ -7,9 +7,10 @@ $gray: #848484
 $downy: #61C9C5
 $concrete: #F3F3F3
 $emperor: #4F4F4F
+$text: #5B5B5B
 
 //SIZES
-$content-size: 1210px
+$content-size: 1230px
 $white-text: #ffffff
 $black-text: #000
 $accenttext: #173343
@@ -30,8 +31,10 @@ $gutter: $grid-gutter-width
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 
-@import 'node_modules/swiper/swiper-bundle'
-@import 'node_modules/choices.js/public/assets/styles/choices.min'
+@import '../../vendor/swiper/swiper-bundle'
+@import '../../vendor/choices.js/public/assets/styles/choices.min'
+@import '../../vendor/mmenu-js/dist/mmenu'
+
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
@@ -89,7 +92,7 @@ body
 .container
    margin: 0 auto
    max-width: $content-size
-   padding: 0 15px
+   padding: 0 25px
    width: 100%
 
 // --- 

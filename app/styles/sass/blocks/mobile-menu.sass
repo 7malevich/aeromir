@@ -1,123 +1,64 @@
-.burger
+.burger-menu
    display: none
-   //visibility: hidden
-   cursor: pointer
-   outline: none
-   background: none
-   border: none
-   position: absolute
-   font-size: 0
-   z-index: 5000
-   color: transparent
-   width: 30px
-   height: 18px
-   top: 49px
-   right: 35px
-   transform: translateY(-50%)
+   z-index: 10
+   transition: all .15s linear
    &.active
       position: absolute
-      top: 50px
-      right: 50px
-      span
-         opacity: 0
-      &::before
-         transform: rotate(45deg)
-      &::after
-         transform: rotate(-45deg)
-      &::before,
-      &::after
-         top: 10px
-   &::after,
-   &::before,
-   span
-      display: block
-      width: 100%
-      height: 2px
-      background-color: black
+      top: -4px
+      right: 0
+      .mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened~.mm-slideout &
+         transform: translate3d(0,100%, 0) !important
+         height: 100vh
+      & .burger-menu__btn
+         span
+            opacity: 0
+         &::before
+            transform: rotate(45deg)
+         &::after
+            transform: rotate(-45deg)
+         &::before,
+         &::after
+            top: 10px
+   &__btn
+      background: none
+       //display: none
+       //visibility: hidden
+      //cursor: pointer
+      //outline: none
+      border: none
       position: absolute
-      left: 0
-   &::after,
-   &::before
-      content: ""
-
-      transition: transform .2.5s linear
-   &::before
-      top: 0
-   &::after
-      bottom: 0
-   span
-      top: 50%
+      font-size: 0
+      z-index: 5000
+      color: transparent
+      width: 30px
+      height: 18px
+      top: 49px
+      right: 35px
       transform: translateY(-50%)
-      height: 2px
-      transform: opacity .2s linear
-   .show-burger &
-      z-index: 10
-
-      span
-         opacity: 0
-      &::before
-         transform: rotate(45deg)
-      &::after
-         transform: rotate(-45deg)
+      &::after,
       &::before,
+      span
+         display: block
+         width: 100%
+         height: 2px
+         background-color: #1E4EA0
+         border-radius: 1px
+         position: absolute
+         left: 0
+      &::after,
+      &::before
+         content: ""
+         transition: transform .2.5s linear
+      &::before
+         top: 0
       &::after
-         top: 45px
-
-.sidebar
-   width: 100%
-   height: 100vh
-   background-color: $gray
-   transform: translateY(-100%)
-   transition: transform .2s linear
-   position: absolute
-   z-index: 11
-   top: 0
-   right: 0
-   left: 0
-   bottom: 0
-
-   &__close
-      border: 0
-      background: transparent
-      padding: 5px
-      margin: 0
-      position: absolute
-      right: 20px
-      top: 20px
-      &-img
-         width: 23px
-         height: 23px
-         opacity: .5
-
-   .show-sidebar &
-      transform: translateX(0)
-      transition: transform .2s linear
-      overflow: hidden
-   &__inner
-      display: flex
-      justify-content: center
-      align-items: center
-      height: 100vh
-   &__list
-      font-size: 25px
-      margin-bottom: 10px
-      &:last-child
-         margin-bottom: 0
-      &:nth-child(2n)
-         color: $accent
-
-.page__mask
-   display: block
-   width: 100%
-   height: 100%
-
-   background-color: rgba($black, .9)
-
-   position: absolute
-   top: 0
-   left: 0
-   z-index: 100
+         bottom: 0
+      span
+         top: 50%
+         transform: translateY(-50%)
+         height: 2px
+         transform: opacity .2s linear
 
 @media only screen and (max-width : 772px)
-   .burger
+   .burger-menu
       display: block

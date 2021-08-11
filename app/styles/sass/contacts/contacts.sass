@@ -1,0 +1,65 @@
+.contacts
+   padding: 80px 0 50px 0
+   &__adress
+      width: 270px
+   &__form
+      margin-bottom: 150px
+      & .container .section-title
+         margin-bottom: 30px
+      &-inner
+         padding: 35px
+   &__inner
+      display: flex
+      justify-content: space-between
+   &__list
+      flex-direction: column
+      & .navigation__item-adress
+         margin-bottom: 10px
+   &__item
+      & .title
+         font-weight: 500
+         font-size: 20px
+         line-height: 140%
+         letter-spacing: 0.75px
+         color: $black
+         margin-bottom: 20px
+      & .contacts__list
+         margin-bottom: 50px
+      &:first-child
+         max-width: 435px
+   &__maps
+      display: flex
+      &-md
+         display: none
+      &-mini
+         display: none
+@media only screen and (max-width : 958px)
+   .contacts
+      padding: 40px 0
+
+   .contacts__maps-pc
+      display: none
+   .contacts__maps-md
+      display: block
+@media only screen and (max-width : 731px)
+   .contacts__maps-md
+      display: none
+   .contacts__maps-mini
+      display: block
+   .contacts__inner
+      flex-direction: column
+   .contacts
+      padding: 30px 0
+   .contacts__maps
+      margin-top: 48px
+      margin-left: -25px
+      margin-right: -25px
+   .contacts__item .contacts__list
+      margin-bottom: 40px
+   .contacts__form-inner
+      padding: 0
+@media screen and ( max-width: 521px )
+   .contacts__form-inner .btn-min-width
+      width: 100%
+   .contacts__form
+      margin-bottom: 100px

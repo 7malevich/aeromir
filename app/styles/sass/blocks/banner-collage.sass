@@ -1,4 +1,5 @@
 .baner-collage
+   margin-bottom: 50px
    & .container
       padding: 0
    &__suptitle
@@ -41,8 +42,22 @@
          max-width: 280px
          width: 100%
          display: flex
+
          flex-direction: column
          & > .baner-collage__item
+            position: relative
+            z-index: 50
+            &::before
+               content: ''
+               z-index: -1
+               position: absolute
+               top: 0
+               bottom: 0
+               right: 0
+               left: 0
+               width: 100%
+               height: 100%
+               background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 100%)
             &:first-child
                margin-bottom: 20px
                height: 270px
@@ -66,6 +81,9 @@
             background: #5a5555
 
 @media only screen and (max-width : 971px)
+   .baner-collage__item-box .section-title
+      font-size: 30px!important
+      white-space: normal
    .baner-collage__item-max,
    .baner-collage__inner
       height: 370px
@@ -83,8 +101,6 @@
       padding: 22px
    .baner-collage__btn
       margin: 0
-   .baner-collage
-      margin-bottom: 30px
 @media only screen and (max-width : 772px)
    .baner-collage__inner
       display: flex
@@ -94,7 +110,7 @@
       flex-direction: revert
    .baner-collage__item-wrapper
       max-width: 100%
-      margin-top: 10px
+      margin-top: 20px
       height: auto
    .baner-collage__item-max
       margin-right: 0
@@ -102,7 +118,7 @@
    .baner-collage__item-wrapper>.baner-collage__item:first-child
       margin-bottom: 0
       height: 220px
-      margin-right: 10px
+      margin-right: 20px
    .baner-collage__item
       height: auto
       background-size: cover
@@ -115,39 +131,34 @@
    .baner-collage__item.baner-collage__item-max
       width: 100%
       background-size: cover
-      background-position: bottom center
-      height: 350px
+      background-position: center left
+      height: 450px
    .baner-collage__item .title
       font-size: 16px !important
-   .baner-collage
-      margin-bottom: 20px
    .product-cart .container .section-title
       font-size: 22px !important
       margin-bottom: 6px !important
-@media only screen and (max-width : 600px)
-   .baner-collage__item.baner-collage__item-max
-      height: 287px
+//@media only screen and (max-width : 600px)
    .baner-collage__item-wrapper>.baner-collage__item:first-child
       height: 190px
 @media only screen and (max-width : 500px)
    .baner-collage__item-wrapper>.baner-collage__item:first-child
-      margin-right: 4px
+      margin-right: 20px
    .baner-collage__item-wrapper
-      margin-top: 4px
+      margin-top: 20px
    .baner-collage__item-wrapper>.baner-collage__item:first-child
       height: 159px
       background-size: cover
-   .baner-collage__item.baner-collage__item-max
-      height: 235px
+   //.baner-collage__item.baner-collage__item-max
+   //   height: 235px
    .baner-collage__btn
-      width: 157px
+      width: 100%
    .baner-collage__item.baner-collage__item-max .btn
       font-size: 14px !important
       padding: 10px 40px
    .baner-collage__title
       margin-bottom: 8px
-   .baner-collage__item-box .section-title
-      font-size: 18px!important
+
    .baner-collage__item-wrapper>.baner-collage__item:first-child
       padding: 10px
    .baner-collage__item:nth-child(2)
@@ -156,11 +167,18 @@
       padding-top: 4px
       padding-left: 4px
 @media only screen and (max-width : 400px)
-   .baner-collage__item.baner-collage__item-max
-      height: 192px
+   //.baner-collage__item.baner-collage__item-max
+   //   height: 192px
    .baner-collage__item-wrapper>.baner-collage__item:first-child
-      height: 140px
+      height: 270px
+      margin-right: 0 !important
+      margin-bottom: 20px !important
    .baner-collage__item .title
-      font-size: 13px !important
+      font-size: 20px !important
    .baner-collage__more span
       font-size: 9px !important
+   .baner-collage__item-wrapper
+      display: flex
+      flex-direction: column
+   .baner-collage__item:nth-child(2)
+      height: 160px

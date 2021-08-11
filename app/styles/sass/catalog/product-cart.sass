@@ -1,0 +1,546 @@
+.product-cart
+   &__more
+      display: flex
+      justify-content: center
+   &__inner
+      display: flex
+      flex-direction: column
+      padding: 0
+      &--shodow
+         box-shadow: none
+      &-tile
+         display: flex
+         flex-direction: inherit
+         flex-wrap: wrap
+         justify-content: center
+         align-items: center
+         //grid-template-columns: 1fr 1fr 1fr
+         //display: grid
+         //grid-template-columns: repeat(auto-fill, minmax(270px, 1fr))
+         //justify-items: center
+         //grid-gap: 20px
+
+   &__item
+      display: flex
+      align-items: flex-start
+      padding: 25px
+      margin-bottom: 55px
+      &:last-child
+         margin-bottom: 0
+      &.nextstop
+         margin-bottom: 40px
+      &-tile
+         width: 270px
+         min-height: 380px
+         display: flex
+         justify-content: center
+         flex-direction: column
+         padding: 0 15px
+         background: $white
+         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.1)
+         border-radius: 8px
+         margin-right: 25px
+         margin-bottom: 30px
+         &:nth-child(3n + 3)
+            margin-right: 0
+
+         & .product-cart__title
+            text-align: center
+         & .product-cart__link
+            span
+               background-color: $accent
+   &__img
+      min-width: 220px
+      height: 180px
+      display: flex
+      position: relative
+      flex-direction: column
+      margin-right: 50px
+      img
+         width: 100%
+         height: 100%
+         object-fit: contain
+         margin-bottom: 10px
+   &__recommended
+      font-size: 14px
+      line-height: 24px
+      letter-spacing: 0.15px
+      color: $white-text
+      padding: 0 10px
+      background-color: $downy
+      border-radius: 2px
+      margin-bottom: 10px
+      width: 112px
+   &__stock
+      font-size: 14px
+      line-height: 24px
+      letter-spacing: 0.15px
+      color: $white-text
+      padding: 0 10px
+      background: #FFA048
+      border-radius: 2px
+      width: 90px
+
+   &__content
+      display: flex
+      flex-direction: column
+      &-top
+         display: flex
+         justify-content: space-between
+      &-bottom
+         display: none
+   &__title
+      font-weight: 500
+      font-size: 18px
+      line-height: 24px
+      letter-spacing: 0.75px
+      max-width: 350px
+      width: 100%
+      text-align: left
+      margin-bottom: 15px
+   &__price
+      font-weight: 500
+      font-size: 22px
+      line-height: 24px
+      letter-spacing: 0.75px
+      white-space: nowrap
+      margin-top: 15px
+   &__rater
+      width: 120px
+      height: 20px
+      font-size: 20px
+   &__list
+      margin-right: 0
+   &__text
+      color: $text
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.75px
+      margin-bottom: 15px
+   &__details
+      font-size: 16px
+      line-height: 16px
+      letter-spacing: 0.75px
+      color: $black-text
+      font-weight: 400
+      position: relative
+
+   &__btn
+      width: 175px
+      text-align: center
+      padding: 17px 35px
+      background: #2D72EA
+      &:hover
+         color: $white
+
+.product-cart__item.nextstop ~ .product-cart__item
+   display: none
+
+.product-cart__item-tile.nextstop ~ .product-cart__item-tile
+   display: none
+
+.pagination
+   display: flex
+   &__item
+      display: flex
+      align-items: center
+      margin-right: 15px
+      &:hover
+         a
+            svg
+               path
+                  stroke: $accent
+      &:last-child
+         margin-right: 0
+         & .pagination__link
+            padding-right: 0
+      &:first-child
+         & .pagination__link
+            padding-left: 0
+      &--last
+         margin-left: -15px
+      &--first
+         margin-right: 0
+      &.active
+         & .pagination__link
+            color: $accent
+            font-weight: 900
+   &__link
+      font-size: 18px
+      line-height: 16px
+      letter-spacing: 0.75px
+      color: $black
+      padding: 12px
+      display: block
+      svg
+         min-width: 24px
+         height: 24px
+
+.characteristics
+   display: flex
+   flex-direction: column
+   &__item
+      position: relative
+      filter: none
+      margin-bottom: 0
+      &.active
+         transition: all .5s ease-in-out
+         & .characteristics__content
+            height: auto !important
+            margin-bottom: 30px
+         & .characteristics__title
+            position: relative
+            &::before
+               content: ''
+               background-image: url(../images/dist/arrow-down.svg)
+               width: 15px
+               height: 8px
+               background-repeat: no-repeat
+               position: absolute
+               right: 6px
+               top: 3px
+               background-size: cover
+               transform: rotate(180deg)
+
+   &__content
+      position: relative
+      height: 0
+      overflow: hidden
+      &-item
+         display: flex
+         justify-content: space-between
+         padding: 13px 15px
+         background: $white
+         border-radius: 4px
+         border-bottom: 1px solid $silver
+
+   &__name
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.15px
+      color: $text
+   &__description
+      font-size: 16px
+      line-height: 24px
+      letter-spacing: 0.15px
+      color: $black-text
+   &__title
+      margin-bottom: 25px
+      cursor: pointer
+      width: 200px
+      position: relative
+      &::before
+         content: ''
+         background-image: url(../images/dist/arrow-down.svg)
+         width: 15px
+         height: 8px
+         background-repeat: no-repeat
+         position: absolute
+         right: 6px
+         top: 3px
+         background-size: cover
+.product-cart__item-tile .product-cart__link span
+   background: #61C9C5
+   border-radius: 4px
+
+.product-baner
+   width: 100%
+   height: 290px
+   background-repeat: no-repeat
+   background-size: cover
+   background-position: center
+   padding: 35px
+   display: flex
+   flex-direction: column
+   justify-content: space-between
+   position: relative
+   z-index: 50
+   &::before
+      content: ''
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.47) 0%, rgba(0, 0, 0, 0) 58.43%)
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      position: absolute
+   &__link
+      text-decoration: underline
+      color: $white-text
+      text-decoration-color: $white-text
+      &:hover
+         color: $white-text
+   &__suptitle
+      font-size: 22px
+      z-index: 1
+      color: $white-text
+      line-height: 140%
+      letter-spacing: 0.75px
+   &__heading
+      margin-top: 50px
+      margin-bottom: 30px
+      font-weight: normal
+      font-size: 22px
+      line-height: 140%
+      text-align: center
+      letter-spacing: 0.75px
+      color: $black-text
+   &__box
+      & .btn
+         margin-right: 25px
+         padding: 17px 10px !important
+         &:last-child
+            margin-right: 0
+         &:hover
+            color: $white
+   &__title
+      font-weight: 500
+      font-size: 36px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: $white
+      z-index: 50
+   &__spacing
+      margin-top: 50px
+
+@media only screen and (max-width : 1230px)
+   .product-cart__item-tile
+      margin-right: 35px
+      display: flex
+      min-width: 270px
+      align-items: center
+      text-align: center
+      flex-wrap: nowrap
+      &:nth-child(3n+3)
+         margin-right: 35px
+      &:nth-child(2n + 2)
+         margin-right: 0
+@media only screen and (max-width : 1179px)
+   .product-cart__item-tile
+      &:nth-child(3n+3)
+         margin-right: 30px
+      &:nth-child(2n+2)
+         margin-right: 0
+   .product-cart__item
+      padding: 5px
+   .product-cart .product-baner__title
+      font-size: 29px !important
+
+@media only screen and (max-width : 1000px)
+   .product-cart__img
+      min-width: 166px
+      height: 150px
+   .product-cart__title
+      font-size: 17px !important
+   .product-cart__price
+      font-size: 20px !important
+   .product-cart__img
+      margin-right: 20px!important
+   .product-baner--max .product-baner__title
+      font-size: 25px
+      font-weight: 500
+      line-height: 140%
+
+@media only screen and (max-width : 866px)
+   .navbar-nav__item
+      padding: 14px 14px 14px 0
+   .product-baner__page
+      width: calc( 100% + 50px ) !important
+      & .product-baner__title
+         font-size: 25px
+   .product-cart .product-baner
+      width: calc( 100% + 50px )
+
+   .about-information__content
+      margin-bottom: 0
+   .form.mr-25 .btn
+      margin: 0
+      width: 100%
+   .product-baner.product-baner--max
+      height: 290px
+   .product-baner
+      margin: 0 -25px !important
+      width: calc(100% + 25px)
+   .about-information__content.about-information__content-about
+      width: calc(100% + 26px)
+   .about-information__inner-licenses,
+   .gallery-about-mini__swiper-pagination
+      width: calc(100% - 26px)
+   .product-cart__inner-tile
+      display: flex
+      justify-content: space-evenly
+   .product-cart__inner
+      margin-top: 20px
+   .sidebar-about
+      display: none
+   .about-information__content
+      width: 100%
+      margin-bottom: 100px
+   .product-cart__img
+      min-width: 190px
+   .product-cart__item
+      padding: 0
+      margin-bottom: 90px
+      &:last-child
+         margin-bottom: 0
+@media only screen and (max-width : 700px)
+   .product-cart__img
+      min-width: 170px
+   .product-cart__title
+      font-size: 16px!important
+   .product-cart .product-baner__title
+      font-size: 22px !important
+
+@media only screen and (max-width : 642px)
+   .product-cart__item-tile
+      margin-right: 0
+      min-width: 270px
+      width: 100%
+      &:nth-child(3n+3)
+         margin-right: 0
+@media only screen and (max-width : 600px)
+   .pagination__item
+      margin-right: 0
+   .pagination__link
+      font-size: 16px
+   .product-cart__stock
+      font-size: 13px
+      line-height: 22px
+      padding: 0 10px
+      width: 85px
+      position: absolute
+      bottom: -9px
+   .pagination__item--last,
+   .pagination__item--first
+      display: none
+
+   .product-cart__recommended
+      font-size: 13px
+      line-height: 22px
+      padding: 0 10px
+      margin-bottom: 6px
+      position: absolute
+      bottom: 11px
+      width: 104px
+   .product-baner
+      height: 235px
+      padding: 25px
+   .product-baner__title
+      font-weight: 500
+      font-size: 30px
+      line-height: 140%
+   .product-baner__suptitle
+      font-weight: normal
+      font-size: 18px
+      line-height: 140%
+   .product-cart__text,
+   .characteristics,
+   .product-cart__btn
+      margin-left: -190px
+
+   .product-cart__text
+      margin-top: 100px
+      z-index: 5
+   .product-cart__price
+      white-space: unset
+   .product-cart__content-bottom
+      display: block
+      margin-left: -190px
+
+   .product-cart__content-bottom .product-cart__price
+      text-align: left
+   .product-cart__content-top .product-cart__price
+      display: none
+   .characteristics__title
+      margin-bottom: 21px
+   .comments__rater
+      margin-bottom: 30px
+   .product-cart__price
+      margin-bottom: 30px
+   .product-cart__content-top + .comments__rater
+      display: none
+   .btn.product-cart__btn
+      width: calc(100% + 191px)
+   .characteristics__item.active .characteristics__content
+      margin-left: -10px
+      margin-right: -10px
+@media only screen and (max-width : 510px)
+   .product-baner__page
+      & .product-baner__title
+         font-size: 18px
+
+   .product-cart .product-baner__title
+      font-size: 18px !important
+   .product-baner--max .product-baner__box
+      display: flex
+      flex-direction: column
+      margin-right: 25px
+      & .btn
+         margin-right: 0
+         &:first-child
+            margin-bottom: 15px
+   .product-baner--max .product-baner__title
+      font-size: 22px
+   .product-baner
+      height: 190px
+   .product-baner__title
+      font-size: 22px
+   .product-baner__suptitle
+      font-size: 14px
+   .product-cart__text
+      margin-top: 45px
+   .characteristics__name,
+   .characteristics__description
+      font-size: 14px
+      line-height: 24px
+   .product-cart__title
+      min-height: 100px
+@media only screen and (max-width : 450px)
+   .product-cart__item-page
+      display: flex
+      flex-direction: column
+      width: 100%
+      justify-content: flex-start
+      & .product-cart__img
+         width: 100%
+         height: 200px
+         display: flex
+         justify-content: flex-start
+         align-items: flex-start
+      & .btn.product-cart__btn
+         width: 100% !important
+      //& .product-cart__content
+      & .characteristics, .product-cart__btn, .product-cart__text
+         margin-left: 0px
+      & .product-cart__text
+         margin-top: 15px
+      & .product-cart__btn, .product-cart__content-bottom
+         margin-left: 0
+
+   .about-information__gallery
+      height: 300px
+   .product-cart__img
+      min-width: 135px
+      height: 110px
+      img
+         margin-bottom: 0
+   .product-cart__text
+      margin-top: 25px
+   .characteristics, .product-cart__btn, .product-cart__text
+      margin-left: -155px
+   .product-cart__title
+      margin-bottom: 0
+      min-height: 100px
+   .product-cart__btn
+      width: calc(100% + 155px) !important
+   .product-cart__btn,
+   .product-cart__content-bottom
+      margin-left: -155px
+   .product-cart__img
+      margin-bottom: 25px
+   .product-cart
+      &__text-page
+         & .product-cart__title
+            min-height: auto

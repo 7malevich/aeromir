@@ -1,0 +1,57 @@
+.s-breadcrumb
+   background: #F3F3F3
+   padding: 18px 0 17px 0
+   margin-bottom: 10px
+
+.breadcrumb
+   padding-top: 5px
+   display: flex
+   &__item
+      padding-right: 15px
+      margin-right: 7px
+      position: relative
+      &:after
+         content: ''
+         background: url(../images/dist/breadcrumb-arrow.svg) no-repeat
+         width: 7px
+         height: 12px
+         position: absolute
+         top: calc(50% - 5px)
+         right: 0
+      &:last-child
+         padding-right: 0
+         margin-right: 0
+         &:after
+            background-image: none
+         & .breadcrumb__link
+            cursor: default
+         & .breadcrumb__text
+            &:hover
+               color: #808080
+   &__title
+      font-weight: 500
+      font-size: 18px
+      line-height: 140%
+      letter-spacing: 0.75px
+      color: #111111
+   &__text
+      font-size: 12px
+      line-height: 24px
+      letter-spacing: 0.75px
+      color: #808080
+      transition: color .15s ease-out
+      &:hover
+         color: $accent
+@media screen and ( min-width: 370px)
+   .breadcrumb__item
+      padding-right: 20px
+      margin-right: 14px
+
+@media screen and ( min-width: 772px)
+   .s-breadcrumb
+      background: transparent
+      padding: 25px 0 15px
+   .breadcrumb__title
+      display: none
+   .breadcrumb
+      padding-top: 0

@@ -1,15 +1,18 @@
 .catalog
    padding: 97px 0
+   &__svg
+      margin-bottom: 20px
    &__more
       font-size: 14px
       display: flex
       justify-content: space-between
       align-items: center
+      color: #808080
    &__item
       display: flex
       margin-bottom: 50px
       // end
-      align-items: flex-end
+      align-items: center
       &:last-child
          margin-bottom: 0
       &-box
@@ -35,10 +38,13 @@
       flex-direction: column
       justify-content: flex-end
       position: relative
+      transition: all .15s ease-in-out
       &:nth-child(2n+2)
          margin-right: 0
 
       &:hover
+         transition: all .15s ease-in-out
+
          & .title
             color: $white
             z-index: 5
@@ -55,6 +61,7 @@
             left: 0
             width: 100%
             height: 100%
+            border-radius: 6px
             background: rgba($downy, .5)
       & .title
          color: $black
@@ -101,8 +108,13 @@
       padding: 35px 0
 @media only screen and (max-width : 425px)
    .catalog__inner-img
-      width: 150px
+      width: 100%
       height: 150px
-      margin-right: 8px
+      margin-bottom: 20px
+      &:last-child
+         margin-bottom: 0
    .catalog
       padding: 25px 0
+   .catalog__item-box
+      display: flex
+      flex-direction: column
